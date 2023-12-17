@@ -1,4 +1,4 @@
-import { authCheckReverse, getServerUrl, prependChild, validEmail, fileToBase64 } from './utils/function.js';
+import { authCheckReverse, ServerUrl, validEmail } from './utils/function.js';
 
 const signupData = {
     email: '',
@@ -47,19 +47,12 @@ const signupClick = () => {
     signupBtn.addEventListener('click', getSignupData);
 };
 
-const changeEventHandler = async (e, uid) => {
-    if (uid == 'profile') {
-        const file = e.target.files[0];
-        if (!file) return;
-        const base64 = await fileToBase64(file);
-        signupData.img = base64;
-        signupData.imgTitle = file.name;
-        // profile.value = base64;
+const loginhtml = () => {
+    const gologin = document.querySelector('#loginhtml');
+    gologin.addEventListener('click', window.location.href = "/login.html")
+}
 
-        const helperElement = document.querySelector(`.inputBox p[name="${uid}"]`);
-        helperElement.textContent = '';
-    }
-};
+
 const blurEventHandler = async (e, uid) => {
     if (uid == 'email') {
         const value = e.target.value;
@@ -72,7 +65,7 @@ const blurEventHandler = async (e, uid) => {
         } else if (!isValid) {
             helperElement.textContent = '*올바른 이메일 주소 형식을 입력해주세요. (예: example@example.com)';
         } else {
-            const checkEmail = await fetch(ServerUrl() + '/checkEmail' + `?id=${value}`, {
+            const checkEmail = await fetch(ServerUrl() + '/checkEmail' + `?email=${value}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -158,7 +151,7 @@ const blurEventHandler = async (e, uid) => {
         } else if (value.length > 10) {
             helperElement.textContent = '*닉네임은 최대 10자 까지 작성 가능합니다.';
         } else {
-            const checkId = await fetch(getServerUrl() + '/checkNickname' + `?nickname=${value}`, {
+            const checkId = await fetch(ServerUrl() + '/checkNickname' + `?nickname=${value}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

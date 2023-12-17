@@ -66,5 +66,15 @@ export const prependChild = (parent, child) => {
 };
 
 export const ServerUrl = () => {
-    return location.hostname == 'http://uvicornserver/api';
+    return 'http://localhost:8088/api';
+};
+
+/**
+ *
+ * @param {string} param
+ * @returns
+ */
+export const getQueryString = (param) => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(param);
 };

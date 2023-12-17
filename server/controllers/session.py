@@ -13,10 +13,10 @@ class SessionData(BaseModel):
     imgTitle: str
 
 
-async def createSession(id: str, nickname: str, idx: int, img: str, imgTitle: str):
+async def createSession(email:str, id: str, nickname: str, idx: int):
     session_id = str(uuid4())
     session_data = SessionData(
-        id=id, nickname=nickname, idx=idx, img=img, imgTitle=imgTitle)
+        email=email, id=id, nickname=nickname, idx=idx)
     sessionDict[session_id] = session_data
     return session_id
 
