@@ -9,37 +9,38 @@
         <section>
             <h1>sign up</h1>
             <article>
-                <div>
+                <div class="inputBox">
                     <label for="email">email</label>
-                    <input type="text" placeholder="input your email">
+                    <input type="text" name="email" id="email" placeholder="input your email">
                     <button>verify</button>
-                    <p></p>
-                </div>
+                    <p class="helperText" name="email">*이메일을 입력해주세요</p>
+                </div class="inputBox">
                 <div>
                     <label for="id">id</label>
                     <input type="text" placeholder="input your id">
-                    <p></p>
-                </div>
+                    <p class="helperText" name="id">*아이디를 입력해주세요</p>
+                </div class="inputBox">
                 <div>
                     <label for="pw">password</label>
-                    <input type="text" placeholder="input your pw">
+                    <input type="password" name="pw" id="pw" placeholder="input your pw">
+                    <p class="helperText" name="pw">*비밀번호를 입력해주세요</p>
+                </div>
+                <div class="inputBox">
+                    <label for="pwck">password check</label>
+                    <input type="password" name="pw" id="pw" placeholder="check your pw">
+                    <p class="helperText" name="pwck">*비밀번호를 한번 더 입력해주세요</p>
+                </div>
+                <div class="inputBox">
+                    <label for="nickname">nickname</label>
+                    <input type="text" name="nickname" id="nickname" placeholder="input your nickname">
+                    <p class="helperText" name="nickname">*닉네임을 입력해 주세요</p>
                 </div>
                 <div>
-                    <label for="pwcheck">password check</label>
-                    <input type="text" placeholder="check your pw">
-                    <p></p>
-                </div>
-                <div>
-                    <label for="nick">nickname</label>
-                    <input type="text" placeholder="input your nickname">
-                    <p></p>
-                </div>
-                <div>
-                    <p></p>
                     <button>go to login</button>
                     <button>sign up</button>
                 </div>
             </article>
         </section>
     </body>
+    <script src="./signup.js" type="module"></script>
 </html>
