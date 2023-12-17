@@ -19,5 +19,9 @@ document.getElementById('signupBtn').addEventListener('click', function () {
         alert('Please fill in all fields.');
     }
 });
+document.getElementById('gotoSignup').addEventListener('click', function (){
+    window.location.href = "/signup.html";
+}
+)
 await authCheckReverse();
 
