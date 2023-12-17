@@ -13,36 +13,23 @@
         <section>
             <h1>sign up</h1>
             <article>
-                <div class="inputBox">
-                    <label for="email">email</label>
-                    <input type="text" name="email" id="email" placeholder="input your email">
-                    <button>verify</button>
-                    <p class="helperText" name="email">*이메일을 입력해주세요</p>
-                </div class="inputBox">
-                <div class="inputBox">
-                    <label for="id">id</label>
-                    <input type="text" placeholder="input your id">
-                    <p class="helperText" name="id">*아이디를 입력해주세요</p>
-                </div class="inputBox">
-                <div class="inputBox">
-                    <label for="pw">password</label>
-                    <input type="password" name="pw" id="pw" placeholder="input your pw">
-                    <p class="helperText" name="pw">*비밀번호를 입력해주세요</p>
-                </div>
-                <div class="inputBox">
-                    <label for="pwck">password check</label>
-                    <input type="password" name="pw" id="pw" placeholder="check your pw">
-                    <p class="helperText" name="pwck">*비밀번호를 한번 더 입력해주세요</p>
-                </div>
-                <div class="inputBox">
-                    <label for="nickname">nickname</label>
-                    <input type="text" name="nickname" id="nickname" placeholder="input your nickname">
-                    <p class="helperText" name="nickname">*닉네임을 입력해 주세요</p>
-                </div>
-                <div>
-                    <button id="loginhtml">go to login</button>
-                    <button id="signupBtn">sign up</button>
-                </div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <br>
+                    <label for="id">ID:</label>
+                    <input type="text" id="id" required>
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                    <br>
+                    <label for="passwordCheck">Password Confirmation:</label>
+                    <input type="password" id="passwordCheck" required>
+                    <br>
+                    <label for="nickname">Nickname:</label>
+                    <input type="text" id="nickname" required>
+                    <br>
+
+                    <button type="button" id="signupBtn">Signup</button>
             </article>
         </section>
     </body>
