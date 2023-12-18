@@ -7,6 +7,9 @@ const signupInputData = {
     pwck :document.getElementById('pwck'),
     nickname : document.getElementById('nickname')
 }
+
+    
+
 Object.values(signupInputData).forEach(inputElement => {
     inputElement.addEventListener('input',elementId);
 });
@@ -24,11 +27,26 @@ const signupData = {
     nickname: '',
 }
 
-function infoCheckdetect() {
-    return Object.values(infoCheck).every(value => value === true);
-}
 async function capitalizeFirstLetter(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+async function postSignupData(){
+    console.log("start");
+    const {...props} = signupData;
+    // signupData를 서버로 전송
+    console.log("start");
+    const response = await fetch(ServerUrl() + '/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(props)
+    });
+
+    // 서버로부터 응답을 받음
+    const result = await response.json();
+    console.log(result);
 }
 
 function elementId () {
@@ -50,6 +68,7 @@ async function handleInputChange(pwck) {
     if (passwordValue) {
         const isMatch = passwordValue === pwck;
         infoCheck.passwordcheck = isMatch;
+        signupData.password = isMatch? passwordValue : null;
         helperElement.textContent = isMatch ? "" : "일치하지 않습니다.";
     } else {
         helperElement.textContent = "";
@@ -84,13 +103,16 @@ async function signupInfoCheck(param, value){
 }
 
 document.getElementById('signupBtn').addEventListener('click', function () {
-    console.log(infoCheck);
+    const res = Object.values(signupInputData).every(inputElement => inputElement.value);
+    const infoCheckdetect = Object.values(infoCheck).every(value => value === true);
     // 값이 모두 채워져 있는지 확인
-    if (emailInput.value && idInput.value && passwordInput.value && passwordCheckInput.value && nicknameInput.value) {
+    if (res) {
         if (infoCheckdetect){
+            console.log(signupData);
+            postSignupData;
             alert('회원가입 성공 로그인 페이지로 이동합니다.');
             // 모든 값이 채워져 있다면 /login.html로 이동
-            window.location.href = '/login.html';
+            //window.location.href = '/login.html';
         } else {
             alert('입력하신 정보를 다시 확인해 주세요.');
         }
