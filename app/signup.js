@@ -1,14 +1,14 @@
 import {authCheckReverse} from './utils/function.js';
 
-const email = document.getElementById('email').value;
-const id = document.getElementById('id').value;
-const password = document.getElementById('password').value;
-const passwordCheck = document.getElementById('passwordCheck').value;
-const nickname = document.getElementById('nickname').value;
 
 document.getElementById('signupBtn').addEventListener('click', function () {
     // Form에서 각 필드의 값을 가져오기
-
+    
+    const email = document.getElementById('email').value;
+    const id = document.getElementById('id').value;
+    const password = document.getElementById('password').value;
+    const passwordCheck = document.getElementById('passwordCheck').value;
+    const nickname = document.getElementById('nickname').value;
 
     // 값이 모두 채워져 있는지 확인
     if (email && id && password && passwordCheck && nickname) {
