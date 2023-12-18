@@ -14,14 +14,17 @@
         <section>
             <div>
                 <label for="title">제목</label>
-                <textarea placeholder="제목을 입력해주세요!"></textarea>
+                <textarea placeholder="제목을 입력해주세요!" id="title"></textarea>
             </div>
             <div>
                 <label for="content">내용</label>
-                <textarea placeholder="내용을 입력해주세요!"></textarea>
+                <textarea placeholder="내용을 입력해주세요!" id="content"></textarea>
             </div>
         </section>
-        <button>파일 업로드</button>
+        <form id="fileForm" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileInput">
+            <button type="button">파일 업로드</button>
+        </form>
         <div>
             <button>게시글 작성</button>
             <button>취소</button>
@@ -29,5 +32,5 @@
 
 
     </body>
-    <script src="./index.js" type="module"></script>
+    <script src="./boardwrite.js" type="module"></script>
 </html>
