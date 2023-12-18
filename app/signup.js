@@ -26,38 +26,21 @@ async function capitalizeFirstLetter(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
-function signup(){
-    
-}
-
 async function handleCheckInputChange(param) {
-    const inputValues = {
+    console.log("check");
+    const inputValues =  {
         email: emailInput.value,
-        id : idInput.value,
-        nickname : nicknameInput.value
+        id: idInput.value,
+        nickname: nicknameInput.value
     }
     const inputValue = inputValues[param];
     signupInfoCheck(param, inputValue);
 }
 
-async function handleInputChange(){
-    const passwordValue = passwordInput.value;
-    const passwordCheckValue = passwordCheckInput.value;
-    const helperElement = document.querySelector('.inputBox p[name="pwck"]');
-    if (passwordCheckValue && passwordValue && passwordCheckValue != passwordValue){
-        helperElement.textContent = "일치하지 않습니다.";
-        infoCheck.passwordcheck = false;
-    } else if (passwordCheckValue && passwordValue && passwordCheckValue == passwordValue){
-        infoCheck.passwordcheck = true;
-        helperElement.textContent = "";
-    } else {
-        helperElement.textContent = "";
-        infoCheck.passwordcheck = false;
-    }
-}
 
 async function signupInfoCheck(param, value){
-    const Param = capitalizeFirstLetter(param);
+    console.log("start");
+    const Param =  await capitalizeFirstLetter(param);
     const helperElement = document.querySelector(`.inputBox p[name="${param}"]`);
     const checkValue = await fetch(ServerUrl() + '/check' + `${Param}` + `?${param}=${value}`, {
         method: 'GET',
@@ -84,12 +67,28 @@ async function signupInfoCheck(param, value){
 
 
 // 각 입력 필드에 이벤트 리스너 등록
-emailInput.addEventListener('input', handleCheckInputChange("Email", "email"));
-idInput.addEventListener('input', handleCheckInputChange("Id", "id"));
+emailInput.addEventListener('input', () => handleCheckInputChange('email'));
+idInput.addEventListener('input', () => handleCheckInputChange('id'));
 passwordInput.addEventListener('input', handleInputChange);
 passwordCheckInput.addEventListener('input', handleInputChange);
-nicknameInput.addEventListener('input', handleCheckInputChange("Nickname", "nickname"));
+nicknameInput.addEventListener('input', () => handleCheckInputChange('nickname'));
 
+
+async function handleInputChange(){
+    const passwordValue = passwordInput.value;
+    const passwordCheckValue = passwordCheckInput.value;
+    const helperElement = document.querySelector('.inputBox p[name="pwck"]');
+    if (passwordCheckValue && passwordValue && passwordCheckValue != passwordValue){
+        helperElement.textContent = "일치하지 않습니다.";
+        infoCheck.passwordcheck = false;
+    } else if (passwordCheckValue && passwordValue && passwordCheckValue == passwordValue){
+        infoCheck.passwordcheck = true;
+        helperElement.textContent = "";
+    } else {
+        helperElement.textContent = "";
+        infoCheck.passwordcheck = false;
+    }
+}
 document.getElementById('signupBtn').addEventListener('click', function () {
     console.log(infoCheck);
     // 값이 모두 채워져 있는지 확인
