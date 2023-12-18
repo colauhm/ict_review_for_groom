@@ -9,8 +9,6 @@ class SessionData(BaseModel):
     id: str
     nickname: str
     idx: int
-    img: str
-    imgTitle: str
 
 
 async def createSession(email:str, id: str, nickname: str, idx: int):
