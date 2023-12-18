@@ -8,7 +8,15 @@ import hashlib
 
 router = APIRouter(prefix="/api")
 
-
+@router.get('/checkSession')
+async def checkSession(session: Annotated[str, Header()] = None):
+    try:
+        session_data = await getSessionData(session)
+        if not session_data:
+            return False
+        return session_data
+    except Exception as e:
+        return 500, "서버 오류"
 
 
 @router.get('/checkId')
@@ -56,6 +64,10 @@ class Signup(BaseModel):
     nickname:str
     email:str
 
+class Login(BaseModel):
+    id: str
+    password: str
+
 @router.post('/signup')
 async def signup(data:Signup):
     try:
@@ -72,12 +84,20 @@ async def signup(data:Signup):
         print(e)
         return 500, "서버오류" 
     
-@router.get('/checkSession')
-async def checkSession(session: Annotated[str, Header()] = None):
+@router.post("/login")
+async def login(data: Login, response: Response):
+    # print(data.id, data.password)
     try:
-        session_data = await getSessionData(session)
-        if not session_data:
-            return False
-        return session_data
+        res = await execute_sql_query(
+            "SELECT * FROM user WHERE id = %s and password = %s", (data.id, hashlib.sha256(data.password.encode()).hexdigest()))
+        if len(res) == 0:
+            return 401, {"message": "login fail"}
+        else:
+            userInfo = res[0]
+            sessionId = await createSession(
+                userInfo['email'], userInfo['id'], userInfo['nickname'], userInfo['idx'])
+            return 200, sessionId
     except Exception as e:
-        return 500, "서버 오류"
+        print(e)
+        return 500, "서버 오류" ,res[0]
+
