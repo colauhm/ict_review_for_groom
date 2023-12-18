@@ -6,12 +6,30 @@ const passwordInput = document.getElementById('pw');
 const passwordCheckInput = document.getElementById('pwck');
 const nicknameInput = document.getElementById('nickname');
 // 논리곱으로 모든값이 true일 때만 true 라고 변하게 사용
-var infoCheck = false;
+const infoCheck = {
+    email : false,
+    id : false,
+    nickname : false,
+    passwordcheck : false
+} 
+const signupData = {
+    email:'',
+    id: '',
+    password: '',
+    nickname: '',
+}
+
+function signup(){
+    
+}
 
 async function handleCheckInputChange() {
     const emailValue = emailInput.value;
     const idValue = idInput.value;
     const nicknameValue = nicknameInput.value;
+    signupData.email = emailValue;
+    signupData.id = idValue;
+    signupData.nickname = nicknameValue;
     signupInfoCheck("Email", "email", emailValue);
     signupInfoCheck("Id", "id", idValue);
     signupInfoCheck("Nickname", "nickname", nicknameValue);
@@ -23,10 +41,10 @@ async function handleInputChange(){
     const helperElement = document.querySelector('.inputBox p[name="pwck"]');
     if (passwordCheckValue && passwordValue && passwordCheckValue != passwordValue){
         helperElement.textContent = "일치하지 않습니다.";
-        infoCheck = false;
+
     } else {
         helperElement.textContent = "";
-        infoCheck *= true;
+
     }
 }
 
@@ -44,16 +62,16 @@ async function signupInfoCheck(Param, param, value){
         
         if (valueck&& valueck[0] == 200){
             helperElement.textContent = `사용가능한 ${param}입니다.`
-            infoCheck *= true;
+       
         } else {
             helperElement.textContent = `이미 존재하는 ${param}입니다.`
-            infoCheck = false;
+           
         }
     } else{
-        helperElement.textContent = ""
-        infoCheck = false;
+    
     }
 }
+
 
 // 각 입력 필드에 이벤트 리스너 등록
 emailInput.addEventListener('input', handleCheckInputChange);
