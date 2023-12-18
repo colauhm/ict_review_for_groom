@@ -20,7 +20,7 @@ jobs:
 
       - name: Set working directory
         run: |
-          cd path/to/script/directory  # 스크립트 파일이 있는 디렉토리로 이동
+          cd /full/path/to/script/directory  # 스크립트 파일이 있는 디렉토리로 이동
           echo "::set-env name=PYTHONPATH::$(pwd)"  # Python 스크립트 실행을 위해 PYTHONPATH 설정
           
       - name: Install dependencies
