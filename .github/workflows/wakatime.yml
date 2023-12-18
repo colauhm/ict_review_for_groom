@@ -3,7 +3,7 @@ name: Update Wakatime Stats
 on:
   push:
     branches:
-      - main  # 또는 사용하는 기본 브랜치
+      - master  # 또는 사용하는 기본 브랜치
 
 jobs:
   update-stats:
