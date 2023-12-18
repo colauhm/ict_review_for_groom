@@ -43,22 +43,20 @@ function elementId () {
     
 }
 
-async function handleInputChange(pwck){
+async function handleInputChange(pwck) {
     const passwordValue = signupInputData['pw'].value;
     const helperElement = document.querySelector('.inputBox p[name="pwck"]');
-    if (passwordValue){
-        if (passwordValue == pwck){
-            infoCheck.passwordcheck = true;
-            helperElement.textContent = "";
-        } else {
-            helperElement.textContent = "일치하지 않습니다.";
-            infoCheck.passwordcheck = false;
-        }
+
+    if (passwordValue) {
+        const isMatch = passwordValue === pwck;
+        infoCheck.passwordcheck = isMatch;
+        helperElement.textContent = isMatch ? "" : "일치하지 않습니다.";
     } else {
         helperElement.textContent = "";
         infoCheck.passwordcheck = false;
     }
 }
+
 async function signupInfoCheck(param, value){
     const Param =  await capitalizeFirstLetter(param);
     const helperElement = document.querySelector(`.inputBox p[name="${param}"]`);
