@@ -5,6 +5,8 @@ const idInput = document.getElementById('id');
 const passwordInput = document.getElementById('pw');
 const passwordCheckInput = document.getElementById('pwck');
 const nicknameInput = document.getElementById('nickname');
+// 논리곱으로 모든값이 true일 때만 true 라고 변하게 사용
+var infoCheck = false;
 
 async function handleCheckInputChange() {
     const emailValue = emailInput.value;
@@ -21,8 +23,10 @@ async function handleInputChange(){
     const helperElement = document.querySelector('.inputBox p[name="pwck"]');
     if (passwordCheckValue && passwordValue && passwordCheckValue != passwordValue){
         helperElement.textContent = "일치하지 않습니다.";
+        infoCheck = false;
     } else {
         helperElement.textContent = "";
+        infoCheck *= true;
     }
 }
 
@@ -40,11 +44,14 @@ async function signupInfoCheck(Param, param, value){
         
         if (valueck&& valueck[0] == 200){
             helperElement.textContent = `사용가능한 ${param}입니다.`
+            infoCheck *= true;
         } else {
             helperElement.textContent = `이미 존재하는 ${param}입니다.`
+            infoCheck = false;
         }
     } else{
         helperElement.textContent = ""
+        infoCheck = false;
     }
 }
 
@@ -59,10 +66,16 @@ document.getElementById('signupBtn').addEventListener('click', function () {
 
     // 값이 모두 채워져 있는지 확인
     if (emailInput && idInput && passwordInput && passwordCheckInput && nicknameInput) {
+        if (infoCheck){
+            alert('회원가입 성공 로그인 페이지로 이동합니다.');
+            // 모든 값이 채워져 있다면 /login.html로 이동
+            window.location.href = '/login.html';
+        } else {
+            alert('입력하신 정보를 다시 확인해 주세요.');
+        }
         // 여기에 이메일 인증 등의 추가적인 확인 절차를 넣을 수 있습니다.
-        alert('회원가입 성공.');
-        // 모든 값이 채워져 있다면 /login.html로 이동
-        window.location.href = '/login.html';
+        
+        
     } else {
         // 모든 값이 채워져 있지 않다면 사용자에게 알림 등을 보여줄 수 있습니다.
         alert('모든 칸을 채워주세요.');
