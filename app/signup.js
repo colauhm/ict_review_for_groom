@@ -12,6 +12,7 @@ async function handleInputChange() {
     const passwordValue = passwordInput.value;
     const passwordCheckValue = passwordCheckInput.value;
     const nicknameValue = nicknameInput.value;
+    signupInfoCheck(emailValue, idValue, nicknameValue);
 }
 
 async function signupInfoCheck(email, id, nickname) {
@@ -25,11 +26,11 @@ async function signupInfoCheck(email, id, nickname) {
     });
     const emailck = await checkEmail.json();
     if (emailck && emailck[0] == 200){
-
+        console.log("1good");
     } else {
-        
+        console.log("1not good");
     }
-    const checkId = await fetch(ServerUrl() + '/checkEmail' + `?id=${id}`, {
+    const checkId = await fetch(ServerUrl() + '/checkId' + `?id=${id}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -37,11 +38,11 @@ async function signupInfoCheck(email, id, nickname) {
     });
     const idck = await checkId.json();
     if (idck && idck[0] == 200){
-
+        console.log("2good");
     } else {
-        
+        console.log("2not good");
     }
-    const checkNickname = await fetch(ServerUrl() + '/checkEmail' + `?nickname=${nickname}`, {
+    const checkNickname = await fetch(ServerUrl() + '/checkNickname' + `?nickname=${nickname}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -49,9 +50,9 @@ async function signupInfoCheck(email, id, nickname) {
     });
     const nicknameck = await checkNickname.json();
     if (nicknameck && nicknameck[0] == 200){
-
+        console.log("3good");
     } else {
-        
+        console.log("3not good");
     }
 }
 
@@ -65,7 +66,7 @@ nicknameInput.addEventListener('input', handleInputChange);
 document.getElementById('signupBtn').addEventListener('click', function () {
 
     // 값이 모두 채워져 있는지 확인
-    if (emailValue && idValue && passwordValue && passwordCheckValue && nicknameValue) {
+    if (emailInput && idInput && passwordInput && passwordCheckInput && nicknameInput) {
         // 여기에 이메일 인증 등의 추가적인 확인 절차를 넣을 수 있습니다.
         alert('회원가입 성공.');
         // 모든 값이 채워져 있다면 /login.html로 이동
