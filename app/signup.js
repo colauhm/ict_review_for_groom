@@ -1,10 +1,15 @@
 import {ServerUrl, authCheckReverse} from './utils/function.js';
 
-const emailInput = document.getElementById('email');
-const idInput = document.getElementById('id');
-const passwordInput = document.getElementById('pw');
-const passwordCheckInput = document.getElementById('pwck');
-const nicknameInput = document.getElementById('nickname');
+const signupInputData = {
+    email : document.getElementById('email'),
+    id : document.getElementById('id'),
+    pw :document.getElementById('pw'),
+    pwck :document.getElementById('pwck'),
+    nickname : document.getElementById('nickname')
+}
+Object.values(signupInputData).forEach(inputElement => {
+    inputElement.addEventListener('input',elementId);
+});
 
 const infoCheck = {
     email : false,
@@ -26,20 +31,35 @@ async function capitalizeFirstLetter(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
-async function handleCheckInputChange(param) {
-    console.log("check");
-    const inputValues =  {
-        email: emailInput.value,
-        id: idInput.value,
-        nickname: nicknameInput.value
+function elementId () {
+    const currentInputId = this.id;
+    const inputValue = signupInputData[currentInputId].value;
+    
+    if (currentInputId == 'pwck'){
+        handleInputChange(inputValue);
+    } else if (currentInputId != 'pw') {
+        signupInfoCheck(currentInputId, inputValue);
     }
-    const inputValue = inputValues[param];
-    signupInfoCheck(param, inputValue);
+    
 }
 
-
+async function handleInputChange(pwck){
+    const passwordValue = signupInputData['pw'].value;
+    const helperElement = document.querySelector('.inputBox p[name="pwck"]');
+    if (passwordValue){
+        if (passwordValue == pwck){
+            infoCheck.passwordcheck = true;
+            helperElement.textContent = "";
+        } else {
+            helperElement.textContent = "일치하지 않습니다.";
+            infoCheck.passwordcheck = false;
+        }
+    } else {
+        helperElement.textContent = "";
+        infoCheck.passwordcheck = false;
+    }
+}
 async function signupInfoCheck(param, value){
-    console.log("start");
     const Param =  await capitalizeFirstLetter(param);
     const helperElement = document.querySelector(`.inputBox p[name="${param}"]`);
     const checkValue = await fetch(ServerUrl() + '/check' + `${Param}` + `?${param}=${value}`, {
@@ -48,7 +68,6 @@ async function signupInfoCheck(param, value){
             'Content-Type': 'application/json'
         }
     });
-    
     const valueck = await checkValue.json();
     //email 값이 존재하면 중복유무 체크 아닐경우 텍스트 없앰
     if (value){
@@ -61,34 +80,11 @@ async function signupInfoCheck(param, value){
             infoCheck[param] = false;
         }
     } else{
+        helperElement.textContent = '';
         infoCheck[param] = false;
     }
 }
 
-
-// 각 입력 필드에 이벤트 리스너 등록
-emailInput.addEventListener('input', () => handleCheckInputChange('email'));
-idInput.addEventListener('input', () => handleCheckInputChange('id'));
-passwordInput.addEventListener('input', handleInputChange);
-passwordCheckInput.addEventListener('input', handleInputChange);
-nicknameInput.addEventListener('input', () => handleCheckInputChange('nickname'));
-
-
-async function handleInputChange(){
-    const passwordValue = passwordInput.value;
-    const passwordCheckValue = passwordCheckInput.value;
-    const helperElement = document.querySelector('.inputBox p[name="pwck"]');
-    if (passwordCheckValue && passwordValue && passwordCheckValue != passwordValue){
-        helperElement.textContent = "일치하지 않습니다.";
-        infoCheck.passwordcheck = false;
-    } else if (passwordCheckValue && passwordValue && passwordCheckValue == passwordValue){
-        infoCheck.passwordcheck = true;
-        helperElement.textContent = "";
-    } else {
-        helperElement.textContent = "";
-        infoCheck.passwordcheck = false;
-    }
-}
 document.getElementById('signupBtn').addEventListener('click', function () {
     console.log(infoCheck);
     // 값이 모두 채워져 있는지 확인
@@ -110,7 +106,6 @@ document.getElementById('gotoLogin').addEventListener('click', function (){
     window.location.href = "/login.html";
 }
 )
-
 
 await authCheckReverse();
 
