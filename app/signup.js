@@ -8,8 +8,6 @@ const signupInputData = {
     nickname : document.getElementById('nickname')
 }
 
-    
-
 Object.values(signupInputData).forEach(inputElement => {
     inputElement.addEventListener('input',elementId);
 });
@@ -32,10 +30,8 @@ async function capitalizeFirstLetter(word) {
 }
 
 async function postSignupData(){
-    console.log("start");
     const {...props} = signupData;
     // signupData를 서버로 전송
-    console.log("start");
     const response = await fetch(ServerUrl() + '/signup', {
         method: 'POST',
         headers: {
@@ -102,14 +98,14 @@ async function signupInfoCheck(param, value){
     }
 }
 
-document.getElementById('signupBtn').addEventListener('click', function () {
+document.getElementById('signupBtn').addEventListener('click', async function () {
     const res = Object.values(signupInputData).every(inputElement => inputElement.value);
     const infoCheckdetect = Object.values(infoCheck).every(value => value === true);
     // 값이 모두 채워져 있는지 확인
     if (res) {
         if (infoCheckdetect){
             console.log(signupData);
-            postSignupData;
+            await postSignupData();
             alert('회원가입 성공 로그인 페이지로 이동합니다.');
             // 모든 값이 채워져 있다면 /login.html로 이동
             //window.location.href = '/login.html';
