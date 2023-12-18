@@ -2,66 +2,58 @@ import {ServerUrl, authCheckReverse} from './utils/function.js';
 
 const emailInput = document.getElementById('email');
 const idInput = document.getElementById('id');
-const passwordInput = document.getElementById('password');
-const passwordCheckInput = document.getElementById('passwordCheck');
+const passwordInput = document.getElementById('pw');
+const passwordCheckInput = document.getElementById('pwck');
 const nicknameInput = document.getElementById('nickname');
 
-async function handleInputChange() {
+async function handleCheckInputChange() {
     const emailValue = emailInput.value;
     const idValue = idInput.value;
-    const passwordValue = passwordInput.value;
-    const passwordCheckValue = passwordCheckInput.value;
     const nicknameValue = nicknameInput.value;
-    signupInfoCheck(emailValue, idValue, nicknameValue);
+    signupInfoCheck("Email", "email", emailValue);
+    signupInfoCheck("Id", "id", idValue);
+    signupInfoCheck("Nickname", "nickname", nicknameValue);
 }
 
-async function signupInfoCheck(email, id, nickname) {
-    //이메일, 아이디, 닉네임 중복확인
-    //중복되는 경우 text출력 
-    const checkEmail = await fetch(ServerUrl() + '/checkEmail' + `?email=${email}`, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    });
-    const emailck = await checkEmail.json();
-    if (emailck && emailck[0] == 200){
-        console.log("1good");
+async function handleInputChange(){
+    const passwordValue = passwordInput.value;
+    const passwordCheckValue = passwordCheckInput.value;
+    const helperElement = document.querySelector('.inputBox p[name="pwck"]');
+    if (passwordCheckValue && passwordValue && passwordCheckValue != passwordValue){
+        helperElement.textContent = "일치하지 않습니다.";
     } else {
-        console.log("1not good");
+        helperElement.textContent = "";
     }
-    const checkId = await fetch(ServerUrl() + '/checkId' + `?id=${id}`, {
+}
+
+async function signupInfoCheck(Param, param, value){
+    const helperElement = document.querySelector(`.inputBox p[name="${param}"]`);
+    const checkValue = await fetch(ServerUrl() + '/check' + `${Param}` + `?${param}=${value}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         }
     });
-    const idck = await checkId.json();
-    if (idck && idck[0] == 200){
-        console.log("2good");
-    } else {
-        console.log("2not good");
-    }
-    const checkNickname = await fetch(ServerUrl() + '/checkNickname' + `?nickname=${nickname}`, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
+    const valueck = await checkValue.json();
+    //email 값이 존재하면 중복유무 체크 아닐경우 텍스트 없앰
+    if (value){
+        
+        if (valueck&& valueck[0] == 200){
+            helperElement.textContent = `사용가능한 ${param}입니다.`
+        } else {
+            helperElement.textContent = `이미 존재하는 ${param}입니다.`
         }
-    });
-    const nicknameck = await checkNickname.json();
-    if (nicknameck && nicknameck[0] == 200){
-        console.log("3good");
-    } else {
-        console.log("3not good");
+    } else{
+        helperElement.textContent = ""
     }
 }
 
 // 각 입력 필드에 이벤트 리스너 등록
-emailInput.addEventListener('input', handleInputChange);
-idInput.addEventListener('input', handleInputChange);
+emailInput.addEventListener('input', handleCheckInputChange);
+idInput.addEventListener('input', handleCheckInputChange);
 passwordInput.addEventListener('input', handleInputChange);
 passwordCheckInput.addEventListener('input', handleInputChange);
-nicknameInput.addEventListener('input', handleInputChange);
+nicknameInput.addEventListener('input', handleCheckInputChange);
 
 document.getElementById('signupBtn').addEventListener('click', function () {
 
