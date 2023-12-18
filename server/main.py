@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routers import user, board, comment
-
+from .database import fileload
 app = FastAPI()
 
 app.add_middleware(
@@ -15,3 +15,4 @@ app.add_middleware(
 app.include_router(board.router)
 app.include_router(user.router)
 app.include_router(comment.router)
+app.include_router(fileload.router)

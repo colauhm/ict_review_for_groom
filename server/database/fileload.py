@@ -1,11 +1,14 @@
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import APIRouter, FastAPI, HTTPException, Depends
 from flask import Flask, request, jsonify
 from typing import List
 import pymysql.cursors
 from .query import execute_sql_query
 import os
 
+
+router = APIRouter(prefix="/api")
 app = Flask(__name__)
+
 UPLOAD_FOLDER = './uploadfolder'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -35,8 +38,6 @@ def upload_file():
     
 def save_file_path_to_db(file_name, file_path):
     try:
-        
-
             # 파일을 데이터베이스에 삽입
         execute_sql_query('INSERT INTO board (file_name, file_path) VALUES (%s, %s)', (file_name, file_path))
 
