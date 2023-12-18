@@ -26,7 +26,7 @@ export const deleteCookie = (cookie_name) => {
 };
 
 export const serverSessionCheck = async () => {
-    const res = await fetch(getServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
+    const res = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
     const data = await res.json();
     return data;
 };
