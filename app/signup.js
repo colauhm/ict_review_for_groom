@@ -1,4 +1,4 @@
-import {authCheckReverse} from './utils/function.js';
+import {ServerUrl, authCheckReverse} from './utils/function.js';
 
 const emailInput = document.getElementById('email');
 const idInput = document.getElementById('id');
@@ -14,8 +14,45 @@ async function handleInputChange() {
     const nicknameValue = nicknameInput.value;
 }
 
-function signupInfoCheck() {
-    
+async function signupInfoCheck(email, id, nickname) {
+    //이메일, 아이디, 닉네임 중복확인
+    //중복되는 경우 text출력 
+    const checkEmail = await fetch(ServerUrl() + '/checkEmail' + `?email=${email}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const emailck = await checkEmail.json();
+    if (emailck && emailck[0] == 200){
+
+    } else {
+        
+    }
+    const checkId = await fetch(ServerUrl() + '/checkEmail' + `?id=${id}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const idck = await checkId.json();
+    if (idck && idck[0] == 200){
+
+    } else {
+        
+    }
+    const checkNickname = await fetch(ServerUrl() + '/checkEmail' + `?nickname=${nickname}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const nicknameck = await checkNickname.json();
+    if (nicknameck && nicknameck[0] == 200){
+
+    } else {
+        
+    }
 }
 
 // 각 입력 필드에 이벤트 리스너 등록
