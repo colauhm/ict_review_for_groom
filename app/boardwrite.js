@@ -18,6 +18,7 @@ const boardCategory = {
     QnABoard : document.getElementById('QnABoard'),
     secretQnABoard : document.getElementById('secretQnABoard')
 }
+
 Object.values(boardCategory).forEach(clickElement => {
     clickElement.addEventListener('click',typeChoice);
 });
@@ -33,8 +34,14 @@ Object.values(writerRquest).forEach(buttonElement => {
 
 function typeChoice(){
     const typebuttonId = this.id;
+    if (typebuttonId != QnABoard){
+        boardCategory.secretQnABoard.style.display = 'none';
+    } else{
+        boardCategory.secretQnABoard.style.display = 'block';
+    }
+    Object.values(boardCategory).forEach(button => {button.disabled = false;});
+    boardCategory[typebuttonId].disabled = true;
     boardComponent.type = typebuttonId;
-    console.log(boardComponent.type)
 }
 
 async function postOrCancel(){
@@ -53,12 +60,8 @@ async function postOrCancel(){
     }
 }
 function getWriteData() {
-
-
     boardComponent.title = boardInputdata.title.value;
     boardComponent.content = boardInputdata.content.value;
-
-    console.log(boardComponent);
 }
 
 
