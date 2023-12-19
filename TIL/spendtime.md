@@ -29,3 +29,13 @@
 ## TOTAL SPENT TIME
 
 0일 10시간 13분
+
+
+# 2023.12.19
+
+6시간 7분
+
+
+## TOTAL SPENT TIME
+
+0일 16시간 12분
