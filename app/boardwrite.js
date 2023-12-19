@@ -13,36 +13,46 @@ const boardComponent = {
 }
 
 const boardCategory = {
-    notice : document.getElementById('notice'),
-    freeBoard : document.getElementById('freeBoard'),
-    QnABoard : document.getElementById('QnABoard'),
-    secretQnABoard : document.getElementById('secretQnABoard')
+    noticeSelector :  document.getElementById('noticeSelector'),
+    freeBoardSelector :  document.getElementById('freeBoardSelector'),
+    QnABoardSelector :  document.getElementById('QnABoardSelector'),
 }
 
 Object.values(boardCategory).forEach(clickElement => {
     clickElement.addEventListener('click',typeChoice);
 });
 
+const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector');
+
+secretQnABoardSelector.addEventListener('change', function(){
+    if (secretQnABoardSelector.checked) {
+        boardComponent.type = secretQnABoardSelector.className;
+      } else {
+        boardComponent.type = boardCategory.QnABoardSelector.id;
+    }
+})
+
+function typeChoice(){
+    const typebuttonId = this.id;
+    boardComponent.type = typebuttonId;
+    if (typebuttonId == "QnABoardSelector"){
+        secretQnABoardSelector.style.display = 'block';
+    } else {
+        secretQnABoardSelector.style.display = 'none';
+    }
+    Object.values(boardCategory).forEach(button => {button.disabled = false;});
+    boardCategory[typebuttonId].disabled = true;
+}
+
 const writerRquest = {
     completed : document.getElementById('completed'),
-    cance : document.getElementById('cancel')
+    cancel : document.getElementById('cancel')
 }
 
 Object.values(writerRquest).forEach(buttonElement => {
     buttonElement.addEventListener('click',postOrCancel);
 });
 
-function typeChoice(){
-    const typebuttonId = this.id;
-    if (typebuttonId != QnABoard){
-        boardCategory.secretQnABoard.style.display = 'none';
-    } else{
-        boardCategory.secretQnABoard.style.display = 'block';
-    }
-    Object.values(boardCategory).forEach(button => {button.disabled = false;});
-    boardCategory[typebuttonId].disabled = true;
-    boardComponent.type = typebuttonId;
-}
 
 async function postOrCancel(){
     getWriteData();
@@ -53,10 +63,10 @@ async function postOrCancel(){
     } else if (boardComponent.title && boardComponent.content) {
         
         postWriteData();
-        alert('작성완료 메인페이지로 이동합니다.')
+        alert('작성완료 메인페이지로 이동합니다.');
         window.location.href = "/";
     } else {
-        alert('필요내용을 전부 작성하지 않았습니다.')
+        alert('필요내용을 전부 작성하지 않았습니다.');
     }
 }
 function getWriteData() {
@@ -84,6 +94,8 @@ async function postWriteData(){
 
 const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
 const myInfo = await req.json();
+const managerCheck = myInfo.type ? false : true;
+boardCategory.noticeSelector.disabled = managerCheck;
 
-boardCategory.notice.disabled = myInfo.type;
+
 
