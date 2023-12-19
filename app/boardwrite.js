@@ -74,7 +74,41 @@ function getWriteData() {
     boardComponent.content = boardInputdata.content.value;
 }
 
+const fileInput = document.getElementById('fileInput');
+const fileUploadButton = document.getElementById('fileUpload');
 
+fileUploadButton.addEventListener('click', function() {
+    // 파일이 선택되었는지 확인
+    if (fileInput.files.length > 0) {
+        // FormData 객체 생성
+        const formData = new FormData();
+
+        // 파일 추가
+        formData.append('file', fileInput.files[0]);
+
+        // 서버로 파일 업로드 요청
+        uploadFile(formData);
+    } else {
+        alert('파일을 선택해주세요.');
+    }
+});
+async function uploadFile(formData) {
+    try {
+        const response = await fetch(ServerUrl() + '/upload', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+        console.log(result);
+
+        // 업로드 성공 시 추가 작업 수행
+        alert('파일이 업로드되었습니다.');
+    } catch (error) {
+        console.error('파일 업로드 오류:', error);
+        alert('파일 업로드에 실패했습니다.');
+    }
+}
 async function postWriteData(){
     const {...props} = boardComponent;
     // signupData를 서버로 전송

@@ -1,44 +1,38 @@
-from fastapi import APIRouter, FastAPI, HTTPException, Depends
-from flask import Flask, request, jsonify
-from typing import List
-import pymysql.cursors
+from fastapi import FastAPI, File, UploadFile
+from fastapi.responses import JSONResponse
 from .query import execute_sql_query
 import os
-
+from fastapi import APIRouter
 
 router = APIRouter(prefix="/api")
-app = Flask(__name__)
+app = FastAPI()
 
 UPLOAD_FOLDER = './uploadfolder'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config = {"UPLOAD_FOLDER": UPLOAD_FOLDER}  # 수정된 부분
 
-@app.route('/upload', methods=['POST'])
-def upload_file():
+# 디렉터리가 없는 경우 생성
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
+@router.post('/upload')
+async def upload_file(file: UploadFile = File(..., max_length=10 * 1024 * 1024)): # 10mb제한
     try:
-        if 'file' not in request.files:
-            return jsonify({'error': 'No file part'})
+        # 파일을 서버에 저장
+        file_path = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
+        with open(file_path, 'wb') as f:
+            f.write(file.file.read())
 
-        file = request.files['file']
+        # 데이터베이스에 파일 경로 저장
+        save_file_path_to_db(file.filename, file_path)
 
-        if file.filename == '':
-            return jsonify({'error': 'No selected file'})
-
-        if file:
-            # 파일을 서버에 저장
-            file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
-            file.save(file_path)
-
-            # 데이터베이스에 파일 경로 저장
-            save_file_path_to_db(file.filename, file_path)
-
-            return jsonify({'message': 'File uploaded successfully'})
+        return JSONResponse(content={'message': 'File uploaded successfully'}, status_code=200)
 
     except Exception as e:
-        return jsonify({'error': f'Error: {str(e)}'})
-    
+        return JSONResponse(content={'error': f'Error: {str(e)}'}, status_code=500)
+
 def save_file_path_to_db(file_name, file_path):
     try:
-            # 파일을 데이터베이스에 삽입
+        # 파일을 데이터베이스에 삽입
         execute_sql_query('INSERT INTO board (file_name, file_path) VALUES (%s, %s)', (file_name, file_path))
 
         print("File path saved to database successfully.")
@@ -47,4 +41,5 @@ def save_file_path_to_db(file_name, file_path):
         print(f"Error: {e}")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")

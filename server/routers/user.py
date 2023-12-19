@@ -20,7 +20,7 @@ async def checkSession(session: Annotated[str, Header()] = None):
 
 
 @router.get('/checkId')
-async def checkEmail(id: str):
+async def checkId(id: str):
     try:
         res = await execute_sql_query(
             "SELECT * FROM user WHERE id = %s", (id,))
