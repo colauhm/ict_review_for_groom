@@ -39,3 +39,7 @@ async def addBoard(data: AddBoard, session: Annotated[str, Header()] = None):
 
     # print(res)
     return 200, {'message': res[0]['id']}
+
+@router.get("/boards")
+async def getBoards(category:str, sortType:str, power:int):
+    return

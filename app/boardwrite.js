@@ -80,6 +80,7 @@ function getWriteData() {
 }
 
 const fileInput = document.getElementById('fileInput');
+
 const fileUploadButton = document.getElementById('fileUpload');
 
 fileUploadButton.addEventListener('click', function() {

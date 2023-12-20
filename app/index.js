@@ -11,9 +11,6 @@ const searchBoardListType = {
     searchContent : ''
 }
 
-
-
-
 //-------------------------------게시판 선택 버튼 및 기능-----------------------------------//
 
 
@@ -101,11 +98,10 @@ Object.values(searchTypeButton).forEach(button => {
 function searchTypeChoice() {
     const searchTypebuttonname = this.name;
     searchBoardListType.category = searchTypebuttonname
-    Object.values(searchTypebuttonname).forEach(button => {
+    Object.values(searchTypeButton).forEach(button => {
         button.disabled = false;
     });
-    sortTypebutton[searchTypebuttonname].disabled = true;
-    console.log(searchTypebuttonname)
+    searchTypeButton[searchTypebuttonname].disabled = true;
 }
 
 const searchDetailTypebutton = {
@@ -122,11 +118,10 @@ Object.values(searchDetailTypebutton).forEach(button => {
 function searchDetailTypeChoice(){
     const searchDetailTypebuttonName = this.name;
     searchBoardListType.datailCategory = searchDetailTypebuttonName
-    Object.values(searchDetailTypebuttonName).forEach(button => {
+    Object.values(searchDetailTypebutton).forEach(button => {
         button.disabled = false;
     });
-    sortTypebutton[searchDetailTypebuttonName].disabled = true;
-    console.log(searchDetailTypebuttonName)
+    searchDetailTypebutton[searchDetailTypebuttonName].disabled = true;
 }
 //-------------------------------------------------------------------------------------------//
 
