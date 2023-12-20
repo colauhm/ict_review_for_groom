@@ -12,18 +12,19 @@
     <body>
         <h1>main page</h1>
         <div class="selectBoardButton">
-            <button id="noticeSelector">공지사항</button>
-            <button id="freeBoardSelector">자유게시판</button>
-            <button id="QnABoardSelector">QnA게시판</button>
+            <button name="notice" id="noticeSelector">공지사항</button>
+            <button name="free" id="freeBoardSelector">자유게시판</button>
+            <button name="QnA" id="QnABoardSelector">QnA게시판</button>
             <div class="secretQnABoardSelector">
+                <button>비밀글</button>
                 <input type="checkbox">
-                <p>비밀글</p>
+                
             </div>
         </div>
         <div class="selectSortButton">
-            <button id="recentSortButton">최신</button>
-            <button id="viewSortButton">조회수</button>
-            <button id="recommendSortButton">추천</button>
+            <button id="recentSorter">최신</button>
+            <button id="viewSorter">조회수</button>
+            <button id="recommendSorter">추천</button>
         </div>
         <div class="secrchBox">
             
@@ -37,7 +38,6 @@
                 <div class="DetailSearch">
                     <button id="titleSearchButton">제목</button>
                     <button id="contentSearchButton">내용</button>
-                    <button id="writerSearchButton">작성자</button>
                 </div>
                 </div>
             <input type="text" class="searchInput" placeholder="What can I find for you?">

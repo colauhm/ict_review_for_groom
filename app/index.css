@@ -2,3 +2,8 @@
 .secretQnABoardSelector{
     display: none;
 }
+
+div{
+    display: flex;
+}
+

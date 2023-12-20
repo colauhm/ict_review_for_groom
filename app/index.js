@@ -12,7 +12,6 @@ document.getElementById('writePost').addEventListener('click', function (){
     window.location.href = "/boardwrite.html";
 })
 
-var boardComponentType = 'noticeSelector';
 
 const boardCategory = {
     noticeSelector :  document.getElementById('noticeSelector'),
@@ -28,41 +27,47 @@ Object.values(boardCategory).forEach(clickElement => {
 const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector');
 
 secretQnABoardSelector.addEventListener('change', function(){
-    boardComponentType =  boardComponentType == 'QnABoardSelector'? 'secretQnABoardSelector':'QnABoardSelector';
-    console.log(boardComponentType);
+    requestBoardListType.category =   requestBoardListType.category == 'QnA'? 'secretQnA':'QnA';
+    console.log(requestBoardListType.category);
 })
 
 function BoardTypeChoice(){
     //authCheck();
     const boardTypebuttonId = this.id;
-    boardComponentType = boardTypebuttonId;
+    requestBoardListType.category = this.name;
     if (boardTypebuttonId == "QnABoardSelector"){
         secretQnABoardSelector.style.display = 'block';
+        sortTypebutton.recommendSorter.style.display = 'none';
     } else {
         secretQnABoardSelector.style.display = 'none';
+        sortTypebutton.recommendSorter.style.display = 'block';
     }
-    Object.values(boardTypebuttonId).forEach(button => {button.disabled = false;});
+    Object.values(boardCategory).forEach(button => {button.disabled = false;});
     boardCategory[boardTypebuttonId].disabled = true;
-    console.log(boardComponentType);
+    console.log(requestBoardListType.category);
 }
 
 //---------------------------------------정렬 선택 부분----------------------------------------//
 const sortTypebutton = {
-    recentSortButton : document.getElementById('recentSortButton'),
-    viewSortButton : document.getElementById('viewSortButton'),
-    recommendSortButton : document.getElementById('recommendSortButton')
-}
-sortTypebutton.recentSortButton.disabled = true;
+    recentSorter: document.getElementById('recentSorter'),
+    viewSorter: document.getElementById('viewSorter'),
+    recommendSorter: document.getElementById('recommendSorter')
+};
 
-Object.values(sortTypebutton).forEach(clickElement => {
-    clickElement.addEventListener('click',sortTypeChoice);
+sortTypebutton.recentSorter.disabled = true;
+
+Object.values(sortTypebutton).forEach(button => {
+    button.addEventListener('click', sortTypeChoice);
 });
 
-function sortTypeChoice(){
+function sortTypeChoice() {
     const sortTypebuttonId = this.id;
-    Object.values(sortTypebuttonId).forEach(button => {button.disabled = false;});
+    Object.values(sortTypebutton).forEach(button => {
+        button.disabled = false;
+    });
     sortTypebutton[sortTypebuttonId].disabled = true;
 }
+
 
 
 
