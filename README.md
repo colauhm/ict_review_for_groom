@@ -1,19 +1,18 @@
 # 프로젝트 목적
-fastapi로 웹 사이트를 혼자 만들어 보며 복습
+     fastapi로 웹 사이트를 혼자 만들어 보며 복습
 
 # 프로젝트 추가기능
-1. 회원등급
-2. 회원가입 시 이메일 인증
-3. 댓글 추천기능
-4. 게시판 분할
+     1. 회원등급
+     2. 회원가입 시 이메일 인증
+     3. 댓글 추천기능
+     4. 게시판 분할
 
 # 실행 명령어
-uvicorn server.main:app --reload --host=0.0.0.0 --port=8088
-python -m http.server 80 -d ./app
+     uvicorn server.main:app --reload --host=0.0.0.0 --port=8088
+     python -m http.server 80 -d ./app
 
 ## 유저 테이블
-(email, id, password, createdAt, idx, power, PRIMARY KEY)
-# CREATE TABLE user
+### CREATE TABLE user
 
      email     VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
      id        VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
@@ -26,9 +25,9 @@ python -m http.server 80 -d ./app
 
 
 ## 보드 테이블 
-(id, title, content, createdAt, updatedAt, writerId, viewCount, recommendCount, fileName, filePath,  PRIMARY KEY)
+     (id, title, content, createdAt, updatedAt, writerId, viewCount, recommendCount, fileName, filePath,  PRIMARY KEY)
 
-# CREATE TABLE board
+### CREATE TABLE board
     id        INT NOT NULL auto_increment,
     title     VARCHAR(255) DEFAULT NULL,
     content   TEXT,
@@ -41,3 +40,17 @@ python -m http.server 80 -d ./app
     fileName  VARCHAR(255) DEFAULT NULL,
     filePath  VARCHAR(255) DEFAULT NULL,
     PRIMARY KEY (id)
+
+## 댓글 테이블
+### CREATE TABLE comment  
+	idx int NOT NULL AUTO_INCREMENT,
+	boardId int DEFAULT NULL,
+	writerId int DEFAULT NULL,
+	content text,
+	createdAt datetime DEFAULT NULL,
+	PRIMARY KEY (idx) 
+
+## 추천 테이블
+### CREATE TABLE recommend 
+	userId INT DEFAULT NULL,
+    boardId INT DEFAULT NULL
