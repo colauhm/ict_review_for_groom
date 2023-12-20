@@ -5,9 +5,7 @@ document.getElementById('writePost').addEventListener('click', function (){
     window.location.href = "/boardwrite.html";
 })
 
-const boardComponent = {
-    type : 'noticeSelector',
-}
+var boardComponentType = 'noticeSelector';
 
 const boardCategory = {
     noticeSelector :  document.getElementById('noticeSelector'),
@@ -25,19 +23,14 @@ secretQnABoardSelector.style.display = 'none';
 
 
 secretQnABoardSelector.addEventListener('change', function(){
-    if (secretQnABoardSelector.check) {
-        boardComponent.type = secretQnABoardSelector.className;
-        console.log("check");
-      } else {
-        boardComponent.type = boardCategory.QnABoardSelector.id;
-        console.log(boardComponent.type);
-    }
+    boardComponentType =  boardComponentType == 'QnABoardSelector'? 'secretQnABoardSelector':'QnABoardSelector';
+    console.log(boardComponentType);
 })
 
 function typeChoice(){
     //authCheck();
     const typebuttonId = this.id;
-    boardComponent.type = typebuttonId;
+    boardComponentType = typebuttonId;
     if (typebuttonId == "QnABoardSelector"){
         secretQnABoardSelector.style.display = 'block';
     } else {
@@ -45,8 +38,9 @@ function typeChoice(){
     }
     Object.values(boardCategory).forEach(button => {button.disabled = false;});
     boardCategory[typebuttonId].disabled = true;
-    console.log(boardComponent.type);
+    console.log(boardComponentType);
 }
+
 
 
 
@@ -55,5 +49,5 @@ const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: get
 const myInfo = await req.json();
 const managerCheck = myInfo.type ? false : true;
 boardCategory.noticeSelector.disabled = managerCheck;
-console.log(boardComponent.type);
+console.log(boardComponentType);
 //authCheck();
