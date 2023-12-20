@@ -25,8 +25,6 @@
 
 
 ## 보드 테이블 
-     (id, title, content, createdAt, updatedAt, writerId, viewCount, recommendCount, fileName, filePath,  PRIMARY KEY)
-
 ### CREATE TABLE board
     id        INT NOT NULL auto_increment,
     title     VARCHAR(255) DEFAULT NULL,
