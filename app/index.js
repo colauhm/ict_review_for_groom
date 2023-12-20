@@ -5,6 +5,14 @@ const requestBoardListType = {
     sortMethod : 'createdAt'
 }
 
+const searchBoardListType = {
+    category : 'all',
+    datailCategory : 'title',
+    searchContent : ''
+}
+
+
+
 //-------------------------------게시판 선택 버튼 및 기능-----------------------------------//
 
 
@@ -27,8 +35,13 @@ Object.values(boardCategory).forEach(clickElement => {
 const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector');
 
 secretQnABoardSelector.addEventListener('change', function(){
-    requestBoardListType.category =   requestBoardListType.category == 'QnA'? 'secretQnA':'QnA';
-    console.log(requestBoardListType.category);
+    requestBoardListType.category = requestBoardListType.category == 'QnA'? 'secretQnA':'QnA';
+    if (requestBoardListType.category == 'secretQnA'){
+        sortTypebutton.viewSorter.style.display = 'none';
+    } else{
+        sortTypebutton.viewSorter.style.display = 'block';
+    }
+    console.log(requestBoardListType)
 })
 
 function BoardTypeChoice(){
@@ -44,7 +57,7 @@ function BoardTypeChoice(){
     }
     Object.values(boardCategory).forEach(button => {button.disabled = false;});
     boardCategory[boardTypebuttonId].disabled = true;
-    console.log(requestBoardListType.category);
+    console.log(requestBoardListType)
 }
 
 //---------------------------------------정렬 선택 부분----------------------------------------//
@@ -62,21 +75,20 @@ Object.values(sortTypebutton).forEach(button => {
 
 function sortTypeChoice() {
     const sortTypebuttonId = this.id;
+    requestBoardListType.sortMethod = this.name
     Object.values(sortTypebutton).forEach(button => {
         button.disabled = false;
     });
     sortTypebutton[sortTypebuttonId].disabled = true;
+    console.log(requestBoardListType)
 }
-
-
-
 
 //-------------------------------------검색 기준 선택 부분-------------------------------------//
 const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
 const myInfo = await req.json();
 const managerCheck = myInfo.type ? false : true;
 boardCategory.noticeSelector.disabled = managerCheck;
-console.log(boardComponentType);
+
 
 
 //authCheck();
