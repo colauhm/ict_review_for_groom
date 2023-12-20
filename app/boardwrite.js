@@ -42,6 +42,8 @@ function typeChoice(){
     }
     Object.values(boardCategory).forEach(button => {button.disabled = false;});
     boardCategory[typebuttonId].disabled = true;
+    boardCategory.noticeSelector.disabled = managerCheck;
+
 }
 
 const writerRquest = {
@@ -130,6 +132,5 @@ const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: get
 const myInfo = await req.json();
 const managerCheck = myInfo.type ? false : true;
 boardCategory.noticeSelector.disabled = managerCheck;
-
 
 
