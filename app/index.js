@@ -13,6 +13,7 @@ const searchBoardListType = {
 
 
 
+
 //-------------------------------게시판 선택 버튼 및 기능-----------------------------------//
 
 
@@ -84,6 +85,51 @@ function sortTypeChoice() {
 }
 
 //-------------------------------------검색 기준 선택 부분-------------------------------------//
+const searchTypeButton = {
+    all : document.getElementById('allSerchButton'),
+    notice : document.getElementById('noticeSearchButton'),
+    free : document.getElementById('freeBoardSearchButton'),
+    QnA : document.getElementById('QnABoardSearchButton')
+}
+searchTypeButton.all.disabled = true;
+
+
+Object.values(searchTypeButton).forEach(button => {
+    button.addEventListener('click', searchTypeChoice);
+});
+
+function searchTypeChoice() {
+    const searchTypebuttonname = this.name;
+    searchBoardListType.category = searchTypebuttonname
+    Object.values(searchTypebuttonname).forEach(button => {
+        button.disabled = false;
+    });
+    sortTypebutton[searchTypebuttonname].disabled = true;
+    console.log(searchTypebuttonname)
+}
+
+const searchDetailTypebutton = {
+    title : document.getElementById('titleSearchButton'),
+    content : document.getElementById('contentSearchButton'),
+    writer : document.getElementById('writerSearchButton')
+}
+searchDetailTypebutton.title.disabled = true;
+
+Object.values(searchDetailTypebutton).forEach(button => {
+    button.addEventListener('click', searchDetailTypeChoice);
+});
+
+function searchDetailTypeChoice(){
+    const searchDetailTypebuttonName = this.name;
+    searchBoardListType.datailCategory = searchDetailTypebuttonName
+    Object.values(searchDetailTypebuttonName).forEach(button => {
+        button.disabled = false;
+    });
+    sortTypebutton[searchDetailTypebuttonName].disabled = true;
+    console.log(searchDetailTypebuttonName)
+}
+//-------------------------------------------------------------------------------------------//
+
 const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
 const myInfo = await req.json();
 const managerCheck = myInfo.type ? false : true;
