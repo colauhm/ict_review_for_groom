@@ -26,7 +26,6 @@ const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector')
 
 secretQnABoardSelector.addEventListener('change', function(){
     boardComponent.type =  boardComponent.type == 'QnABoardSelector'? 'secretQnABoardSelector':'QnABoardSelector';
-    console.log(boardComponent.type);
 })
 
 function typeChoice(){

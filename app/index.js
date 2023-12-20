@@ -1,6 +1,5 @@
 import { authCheck, ServerUrl, getCookie } from './utils/function.js';
 
-
 document.getElementById('writePost').addEventListener('click', function (){
     window.location.href = "/boardwrite.html";
 })
@@ -19,8 +18,6 @@ Object.values(boardCategory).forEach(clickElement => {
 });
 
 const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector');
-secretQnABoardSelector.style.display = 'none';
-
 
 secretQnABoardSelector.addEventListener('change', function(){
     boardComponentType =  boardComponentType == 'QnABoardSelector'? 'secretQnABoardSelector':'QnABoardSelector';
@@ -40,10 +37,6 @@ function typeChoice(){
     boardCategory[typebuttonId].disabled = true;
     console.log(boardComponentType);
 }
-
-
-
-
 
 const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
 const myInfo = await req.json();
