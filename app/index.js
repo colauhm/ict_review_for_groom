@@ -1,5 +1,5 @@
 import { authCheck, ServerUrl, getCookie } from './utils/function.js';
-
+import { BoardItem } from './components/board/boardItem.js';
 const requestBoardListType = {
     category : 'notice',
     sortMethod : 'createdAt'
@@ -102,6 +102,7 @@ function searchTypeChoice() {
         button.disabled = false;
     });
     searchTypeButton[searchTypebuttonname].disabled = true;
+    console.log(searchBoardListType);
 }
 
 const searchDetailTypebutton = {
@@ -122,14 +123,41 @@ function searchDetailTypeChoice(){
         button.disabled = false;
     });
     searchDetailTypebutton[searchDetailTypebuttonName].disabled = true;
+    console.log(searchBoardListType);
 }
 //-------------------------------------------------------------------------------------------//
+
+
+async function boardListLoad(){
+    const {category, sortMethod} = requestBoardListType;
+    const boardList = await fetch(getServerUrl() + '/boards' + `?category=${category}` + `sortType=${sortMethod}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await boardList.json();
+    return data;
+}
+const setBoardItem = async (boardData) => {
+    const boardList = document.querySelector('.boardList');
+    if (boardList && boardData) {
+        boardList.innerHTML = boardData
+            .map((data) => {
+                return BoardItem(data.id, data.createdAt, data.title, data.viewCount, data.writerNickname, data.recommedCount);
+            })
+            .join('');
+    }
+};
+
 
 const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
 const myInfo = await req.json();
 const managerCheck = myInfo.type ? false : true;
 boardCategory.noticeSelector.disabled = managerCheck;
 
+const boardList = await boardListLoad();
+setBoardItem(boardList)
 
 
 //authCheck();
