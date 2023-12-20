@@ -24,12 +24,9 @@ Object.values(boardCategory).forEach(clickElement => {
 
 const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector');
 
-secretQnABoardSelector.addEventListener('change', function(){
-    if (secretQnABoardSelector.checked) {
-        boardComponent.type = secretQnABoardSelector.className;
-      } else {
-        boardComponent.type = boardCategory.QnABoardSelector.id;
-    }
+secretQnABoardSelector.addEventListener('click', function(){
+    boardComponent.type =  boardComponent.type == 'QnABoardSelector'? 'secretQnABoardSelector':'QnABoardSelector';
+    console.log(boardComponent.type);
 })
 
 function typeChoice(){

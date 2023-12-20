@@ -34,7 +34,7 @@ export const serverSessionCheck = async () => {
 export const authCheck = async () => {
     const session = getCookie('session');
     if (session === undefined) {
-        location.href = '/login.html';
+        location.href = '/';
         alert('로그인이 필요합니다.');
     }
 
@@ -43,7 +43,7 @@ export const authCheck = async () => {
     if (!data) {
         deleteCookie('session');
        
-        location.href = '/login.html';
+        location.href = '/';
     }
     return data;
 };
