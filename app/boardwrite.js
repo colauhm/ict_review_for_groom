@@ -9,7 +9,8 @@ const boardComponent = {
     title :'',
     content : '',
     type : '',
-    file: ''
+    fileName: '',
+    filePath:'',
 }
 
 const boardCategory = {
@@ -28,14 +29,13 @@ const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector')
 
 secretQnABoardSelector.addEventListener('change', function(){
     boardComponent.type =  boardComponent.type == 'QnA'? 'secretQnA':'QnA';
-    console.log(boardComponent.type)
 })
 
 function typeChoice(){
     
     const typebuttonId = this.id;
     boardComponent.type = this.name;
-    console.log(boardComponent.type)
+  
     if (typebuttonId == "QnABoardSelector"){
         secretQnABoardSelector.style.display = 'block';
     } else {
@@ -68,8 +68,8 @@ async function postOrCancel(){
     } else if (boardComponent.title && boardComponent.content) {
         
         postWriteData();
-        alert('작성완료 메인페이지로 이동합니다.');
-        window.location.href = "/";
+        //alert('작성완료 메인페이지로 이동합니다.');
+        //window.location.href = "/";
     } else {
         alert('필요내용을 전부 작성하지 않았습니다.');
     }
@@ -105,7 +105,8 @@ async function uploadFile(formData) {
         });
 
         const result = await response.json();
-        console.log(result);
+        boardComponent.fileName = result.fileName;
+        boardComponent.filePath = result.filePath;
 
         // 업로드 성공 시 추가 작업 수행
         alert('파일이 업로드되었습니다.');
@@ -116,11 +117,12 @@ async function uploadFile(formData) {
 }
 async function postWriteData(){
     const {...props} = boardComponent;
-    // signupData를 서버로 전송
-    const response = await fetch(ServerUrl() + '/signup', {
+
+    const response = await fetch(ServerUrl() + '/postBoard', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            //session: getCookie('session')
         },
         body: JSON.stringify(props)
     });

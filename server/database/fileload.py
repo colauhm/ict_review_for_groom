@@ -15,7 +15,7 @@ if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
 @router.post('/upload')
-async def upload_file(file: UploadFile = File(..., max_length=10 * 1024 * 1024)): # 10mb제한
+async def upload_file(file: UploadFile = File(...)): # 10mb제한
     try:
         # 파일을 서버에 저장
         file_path = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
@@ -25,7 +25,7 @@ async def upload_file(file: UploadFile = File(..., max_length=10 * 1024 * 1024))
         # 데이터베이스에 파일 경로 저장
         save_file_path_to_db(file.filename, file_path)
 
-        return JSONResponse(content={'message': 'File uploaded successfully'}, status_code=200)
+        return {'fileName': file.filename, 'filePath':file_path}
 
     except Exception as e:
         return JSONResponse(content={'error': f'Error: {str(e)}'}, status_code=500)
