@@ -1,5 +1,13 @@
 import { authCheck, ServerUrl, getCookie } from './utils/function.js';
 
+const requestBoardListType = {
+    category : 'notice',
+    sortMethod : 'createdAt'
+}
+
+//-------------------------------게시판 선택 버튼 및 기능-----------------------------------//
+
+
 document.getElementById('writePost').addEventListener('click', function (){
     window.location.href = "/boardwrite.html";
 })
@@ -14,7 +22,7 @@ const boardCategory = {
 boardCategory.noticeSelector.disabled = true;
 
 Object.values(boardCategory).forEach(clickElement => {
-    clickElement.addEventListener('click',typeChoice);
+    clickElement.addEventListener('click',BoardTypeChoice);
 });
 
 const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector');
@@ -24,23 +32,46 @@ secretQnABoardSelector.addEventListener('change', function(){
     console.log(boardComponentType);
 })
 
-function typeChoice(){
+function BoardTypeChoice(){
     //authCheck();
-    const typebuttonId = this.id;
-    boardComponentType = typebuttonId;
-    if (typebuttonId == "QnABoardSelector"){
+    const boardTypebuttonId = this.id;
+    boardComponentType = boardTypebuttonId;
+    if (boardTypebuttonId == "QnABoardSelector"){
         secretQnABoardSelector.style.display = 'block';
     } else {
         secretQnABoardSelector.style.display = 'none';
     }
-    Object.values(boardCategory).forEach(button => {button.disabled = false;});
-    boardCategory[typebuttonId].disabled = true;
+    Object.values(boardTypebuttonId).forEach(button => {button.disabled = false;});
+    boardCategory[boardTypebuttonId].disabled = true;
     console.log(boardComponentType);
 }
 
+//---------------------------------------정렬 선택 부분----------------------------------------//
+const sortTypebutton = {
+    recentSortButton : document.getElementById('recentSortButton'),
+    viewSortButton : document.getElementById('viewSortButton'),
+    recommendSortButton : document.getElementById('recommendSortButton')
+}
+sortTypebutton.recentSortButton.disabled = true;
+
+Object.values(sortTypebutton).forEach(clickElement => {
+    clickElement.addEventListener('click',sortTypeChoice);
+});
+
+function sortTypeChoice(){
+    const sortTypebuttonId = this.id;
+    Object.values(sortTypebuttonId).forEach(button => {button.disabled = false;});
+    sortTypebutton[sortTypebuttonId].disabled = true;
+}
+
+
+
+//-------------------------------------검색 기준 선택 부분-------------------------------------//
 const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
 const myInfo = await req.json();
 const managerCheck = myInfo.type ? false : true;
 boardCategory.noticeSelector.disabled = managerCheck;
 console.log(boardComponentType);
+
+
 //authCheck();

@@ -18,6 +18,8 @@ const boardCategory = {
     QnABoardSelector :  document.getElementById('QnABoardSelector'),
 }
 
+//-----------------------------------게시글 유형 선택-------------------------------------------//
+
 Object.values(boardCategory).forEach(clickElement => {
     clickElement.addEventListener('click',typeChoice);
 });
@@ -25,12 +27,15 @@ Object.values(boardCategory).forEach(clickElement => {
 const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector');
 
 secretQnABoardSelector.addEventListener('change', function(){
-    boardComponent.type =  boardComponent.type == 'QnABoardSelector'? 'secretQnABoardSelector':'QnABoardSelector';
+    boardComponent.type =  boardComponent.type == 'QnA'? 'secretQnA':'QnA';
+    console.log(boardComponent.type)
 })
 
 function typeChoice(){
+    
     const typebuttonId = this.id;
-    boardComponent.type = typebuttonId;
+    boardComponent.type = this.name;
+    console.log(boardComponent.type)
     if (typebuttonId == "QnABoardSelector"){
         secretQnABoardSelector.style.display = 'block';
     } else {
@@ -41,6 +46,8 @@ function typeChoice(){
     boardCategory.noticeSelector.disabled = managerCheck;
 
 }
+
+//------------------------------------게시글 작성 요청---------------------------------------//
 
 const writerRquest = {
     completed : document.getElementById('completed'),
@@ -123,7 +130,7 @@ async function postWriteData(){
     console.log(result);
 
 }
-
+//-----------------------------------------------------------------------------//
 const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
 const myInfo = await req.json();
 const managerCheck = myInfo.type ? false : true;
