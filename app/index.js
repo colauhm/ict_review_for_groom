@@ -1,5 +1,5 @@
 import { authCheck, ServerUrl, getCookie } from './utils/function.js';
-import { BoardItem } from './components/board/boardItem.js';
+import { BoardItem } from './components/boardItem.js';
 const requestBoardListType = {
     category : 'notice',
     sortMethod : 'createdAt'
@@ -43,7 +43,7 @@ secretQnABoardSelector.addEventListener('change', function(){
 })
 
 function BoardTypeChoice(){
-    //authCheck();
+    authCheck();
     const boardTypebuttonId = this.id;
     requestBoardListType.category = this.name;
     if (boardTypebuttonId == "QnABoardSelector"){
@@ -125,12 +125,12 @@ function searchDetailTypeChoice(){
     searchDetailTypebutton[searchDetailTypebuttonName].disabled = true;
     console.log(searchBoardListType);
 }
-//-------------------------------------------------------------------------------------------//
+//--------------------------------------보드 요소 불러오기---------------------------------------//
 
 
 async function boardListLoad(){
     const {category, sortMethod} = requestBoardListType;
-    const boardList = await fetch(getServerUrl() + '/boards' + `?category=${category}` + `sortType=${sortMethod}`, {
+    const boardList = await fetch(ServerUrl() + '/boards' /*+ `?category=${category}` + `?sortType=${sortMethod}`*/, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -150,6 +150,9 @@ const setBoardItem = async (boardData) => {
     }
 };
 
+//--------------------------------세션 유무에 따라 보이는 버튼 다르게-----------------------------//
+
+
 
 const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
 const myInfo = await req.json();
@@ -160,4 +163,4 @@ const boardList = await boardListLoad();
 setBoardItem(boardList)
 
 
-//authCheck();
+authCheck();

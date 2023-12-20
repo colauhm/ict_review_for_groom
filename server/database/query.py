@@ -15,7 +15,7 @@ import pymysql.cursors
 async def execute_sql_query(query: str, params: tuple = None):
     try:
         connection = pymysql.connect(
-            host="127.0.0.1",
+            host="localhost",
             user="root",
             password="tjdwnsals12*",
             db="connection",

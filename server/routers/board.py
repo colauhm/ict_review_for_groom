@@ -17,8 +17,8 @@ class modifyBoard(BaseModel):
     id: int
     title: str
     content: str
-    fileName : str
-    filePath : str
+    fileName : Optional[str]
+    filePath : Optional[str]
 
 
 router = APIRouter(prefix="/api")
@@ -27,13 +27,13 @@ router = APIRouter(prefix="/api")
 async def addBoard(data: AddBoard, session: Annotated[str, Header()] = None):
     
     # print(data.title, data.content, data.session)
-    #info = await getSessionData(session)
-    # print(info.idx)
+    info = await getSessionData(session)
+    
     today = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     # print(today)
     # 게시글 추가 로직 board 테이블에 게시글을 추가한다.
-    res = await execute_sql_query("INSERT INTO board (title, content, createdAt, viewCount, filiName, filePath, type) VALUES (%s, %s, %s, %s, %s, %s, %s)", 
-                                                                            (data.title, data.content, today, data.fileName, data.filePath, 0, data.type,))
+    res = await execute_sql_query("INSERT INTO board (title, content, createdAt, viewCount, recommendCount, fileName, filePath, type, writerId) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", 
+                                                                            (data.title, data.content, today, 0, 0, data.fileName, data.filePath, data.type, info.idx,))
     # 게시글 마지막 idx 조회
     res = await execute_sql_query("SELECT MAX(id) AS id FROM board")
 
@@ -41,5 +41,27 @@ async def addBoard(data: AddBoard, session: Annotated[str, Header()] = None):
     return 200, {'message': res[0]['id']}
 
 @router.get("/boards")
-async def getBoards(category:str, sortType:str, power:int):
-    return
+async def getBoards():
+    boards = await execute_sql_query(
+        """
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = 'notice'
+        ORDER BY
+            b.createdAt DESC;
+        """
+    )
+    return boards

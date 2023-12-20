@@ -34,12 +34,12 @@ export const serverSessionCheck = async () => {
 export const authCheck = async () => {
     const session = getCookie('session');
     if (session === undefined) {
-        location.href = '/';
+        location.href = '/login.html';
         alert('로그인이 필요합니다.');
     }
 
     const data = await serverSessionCheck();
-    // console.log(data);
+    console.log(data);
     if (!data) {
         deleteCookie('session');
        

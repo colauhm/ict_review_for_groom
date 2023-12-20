@@ -50,4 +50,3 @@ document.getElementById('gotoSignup').addEventListener('click', function (){
 )
 
 await authCheckReverse();
-setInputBox;

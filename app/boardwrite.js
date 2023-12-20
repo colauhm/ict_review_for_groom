@@ -8,9 +8,9 @@ const boardInputdata = {
 const boardComponent = {
     title :'',
     content : '',
-    type : '',
+    type : 'free',
     fileName: '',
-    filePath:'',
+    filePath: '',
 }
 
 const boardCategory = {
@@ -123,7 +123,7 @@ async function postWriteData(){
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            //session: getCookie('session')
+            session: getCookie('session')
         },
         body: JSON.stringify(props)
     });
@@ -134,9 +134,14 @@ async function postWriteData(){
 
 }
 //-----------------------------------------------------------------------------//
+
+
 const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
 const myInfo = await req.json();
 const managerCheck = myInfo.type ? false : true;
 boardCategory.noticeSelector.disabled = managerCheck;
+boardCategory.freeBoardSelector.disabled = managerCheck;
+
+await authCheck();
 
 
