@@ -1,7 +1,7 @@
 import { authCheck, ServerUrl, getCookie } from './utils/function.js';
 import { BoardItem } from './components/boardItem.js';
 const requestBoardListType = {
-    category : 'notice',
+    category : 'free',
     sortMethod : 'createdAt'
 }
 
@@ -129,14 +129,10 @@ function searchDetailTypeChoice(){
 
 
 async function boardListLoad(){
-    const {category, sortMethod} = requestBoardListType;
-    const boardList = await fetch(ServerUrl() + '/boards' /*+ `?category=${category}` + `?sortType=${sortMethod}`*/, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    });
+    const {category} = requestBoardListType;
+    const boardList = await fetch(ServerUrl() + '/boards' + `?category=${category}` /*+ `?sortType=${sortMethod}`*/, {noCORS: true });
     const data = await boardList.json();
+    console.log(data)
     return data;
 }
 const setBoardItem = async (boardData) => {
@@ -144,7 +140,8 @@ const setBoardItem = async (boardData) => {
     if (boardList && boardData) {
         boardList.innerHTML = boardData
             .map((data) => {
-                return BoardItem(data.id, data.createdAt, data.title, data.viewCount, data.writerNickname, data.recommedCount);
+                console.log("1")
+                return BoardItem(data.boardId, data.boardCreatedAt, data.boardTitle, data.boardViewCount, data.boardRecommendCount, data.userNickname);
             })
             .join('');
     }

@@ -1,9 +1,12 @@
-export const BoardItem = (id, date, title, views, writer, recommeds) => {
+export const BoardItem = (id, date, title, views, recommeds, writer) => {
     // 파라미터 값이 없으면 리턴
     if (!date || !title || views == undefined || recommeds == undefined || !writer) {
         // 없는 데이터 콘솔로 출력
         // console.log(date, title, views, imgUrl, writer);
     }
+    console.log(id, date, title, views, recommeds, writer);
+    console.log(id, date, title, views, recommeds, writer);
+    console.log(id, date, title, views, recommeds, writer);
 
     // 날짜 포맷 변경 YYYY-MM-DD hh:mm:ss
     const dateObj = new Date(date);

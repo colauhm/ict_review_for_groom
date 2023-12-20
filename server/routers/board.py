@@ -41,7 +41,7 @@ async def addBoard(data: AddBoard, session: Annotated[str, Header()] = None):
     return 200, {'message': res[0]['id']}
 
 @router.get("/boards")
-async def getBoards():
+async def getBoards(category:str):
     boards = await execute_sql_query(
         """
         SELECT
@@ -59,9 +59,9 @@ async def getBoards():
         ON
             b.writerId = u.idx
         WHERE
-            b.type = 'notice'
+            b.type = %s
         ORDER BY
             b.createdAt DESC;
         """
-    )
+    ,(category,))
     return boards
