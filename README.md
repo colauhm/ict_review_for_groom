@@ -32,13 +32,13 @@ CREATE TABLE board
      id        INT NOT NULL auto_increment,
      title     VARCHAR(255) DEFAULT NULL,
      content   TEXT,
-     createdat DATETIME DEFAULT NULL,
-     updatedat DATETIME DEFAULT NULL,
-     writerid  INT DEFAULT NULL,
+     createdAt DATETIME DEFAULT NULL,
+     updatedAt DATETIME DEFAULT NULL,
+     writerId  INT DEFAULT NULL,
      viewCount INT DEFAULT NULL,
      recommendCount INT DEFAULT NULL,
      type      VARCHAR(255) DEFAULT NULL,
-     filename  VARCHAR(255) DEFAULT NULL,
-     filepath  VARCHAR(255) DEFAULT NULL,
+     fileName  VARCHAR(255) DEFAULT NULL,
+     filePath  VARCHAR(255) DEFAULT NULL,
      PRIMARY KEY (id)
 );
