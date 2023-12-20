@@ -24,7 +24,7 @@ Object.values(boardCategory).forEach(clickElement => {
 
 const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector');
 
-secretQnABoardSelector.addEventListener('click', function(){
+secretQnABoardSelector.addEventListener('change', function(){
     boardComponent.type =  boardComponent.type == 'QnABoardSelector'? 'secretQnABoardSelector':'QnABoardSelector';
     console.log(boardComponent.type);
 })
