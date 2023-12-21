@@ -140,7 +140,6 @@ const setBoardItem = async (boardData) => {
     if (boardList && boardData) {
         boardList.innerHTML = boardData
             .map((data) => {
-                console.log("1")
                 return BoardItem(data.boardId, data.boardCreatedAt, data.boardTitle, data.boardViewCount, data.boardRecommendCount, data.userNickname);
             })
             .join('');

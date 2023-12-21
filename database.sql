@@ -20,6 +20,7 @@ CREATE TABLE board (
 	writerId  		INT DEFAULT NULL,
 	viewCount 		INT DEFAULT NULL,
 	recommendCount  INT DEFAULT NULL,
+	commentCount    INT DEFAULT NULL,
 	type      		VARCHAR(255) DEFAULT NULL,
 	fileName  		VARCHAR(255) DEFAULT NULL,
 	filePath  		VARCHAR(255) DEFAULT NULL,
@@ -34,6 +35,8 @@ CREATE TABLE comment (
 	PRIMARY KEY (idx) 
 );
 CREATE TABLE recommend (
-	userId INT DEFAULT NULL,
-    boardId INT DEFAULT NULL
+	userId     		INT DEFAULT NULL,
+    boardId    		INT DEFAULT NULL,
+	recommendStatus BOOLEAN DEFAULT NULL,
+	viewStatus 		DATETIME DEFAULT NULL
 );

@@ -1,12 +1,22 @@
 import { authCheck, ServerUrl, getCookie, getUrlId } from './utils/function.js';
 
 const boardCommponent = {
-    nick : document.querySelector('.nick'),
-    createdAt : document.querySelector('.viewCount'),
-    viewCount : document.querySelector('.recommendCount')
+    writerNickname : document.getElementById('writerNickname'),
+    createdAt : document.getElementById('createdAt'),
+    viewCount : document.getElementById('viewCount'),
+    recommendCount : document.getElementById('recommedCount'),
+    commentCount : document.getElementById('commentCount')
 }
 
+Object.values(boardCommponent).forEach(element => {
+    element.addEventListener('DOMContentLoaded',loadCommponent(element));
+});
 
+async function loadCommponent(data){
+    const commponentId = this.id;
+    //const boardCommponent = document.querySelector(`.${commponentClass}`);
+    boardCommponent[commponentId].innerHTML += data[commponentId];
+}
 
 async function getBoard(id){
     const components = await fetch(ServerUrl() + '/board' + `?id=${id}`, {noCORS: true});
@@ -17,6 +27,7 @@ async function getBoard(id){
 const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
 const myInfo = await req.json();
 const boardId = getUrlId();
-getBoard(boardId);
-
+const element = getBoard(boardId);
+console.log(element);
 await authCheck();
+

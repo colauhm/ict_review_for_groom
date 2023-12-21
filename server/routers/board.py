@@ -68,7 +68,6 @@ async def getBoards(category:str):
 async def getBoard(id:int):
     board = await execute_sql_query("""
        SELECT 
-            b.id AS boardId,
             b.title,
             b.content,
             b.createdAt,
