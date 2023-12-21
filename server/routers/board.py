@@ -42,8 +42,7 @@ async def addBoard(data: AddBoard, session: Annotated[str, Header()] = None):
 
 @router.get("/boards")
 async def getBoards(category:str):
-    boards = await execute_sql_query(
-        """
+    boards = await execute_sql_query("""
         SELECT
             b.id AS boardId,
             b.title AS boardTitle,
@@ -62,6 +61,23 @@ async def getBoards(category:str):
             b.type = %s
         ORDER BY
             b.createdAt DESC;
-        """
-    ,(category,))
+        """,(category,))
     return boards
+
+@router.get("/board")
+async def getBoard(id:int):
+    board = await execute_sql_query("""
+        SELECT
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.boardId = %s
+        """, (id,))
+    return board
