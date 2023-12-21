@@ -44,12 +44,12 @@ total_time = calculate_total_time(time_data)
 
 # 새로운 시간 데이터를 Markdown 파일에 추가
 with open("TIL\\spendtime.md", "a", encoding="utf-8") as file:
-    new_time_data_text = f"    \n\n# {timeData['date']}\n\n{timeData['hours']}시간 {timeData['minutes']}분\n"
+    new_time_data_text = f"\n\n# {timeData['date']}\n\n{timeData['hours']}시간 {timeData['minutes']}분\n"
     file.write(new_time_data_text)
     print("New Time Data Added to File:", new_time_data_text)
 
 # 업데이트된 총 소요 시간을 Markdown 파일에 추가
 with open("TIL\\spendtime.md", "a", encoding="utf-8") as file:
-    total_time_text = f"    \n\n## TOTAL SPENT TIME\n\n{format_timedelta(total_time)}\n"
+    total_time_text = f"\n\n## TOTAL SPENT TIME\n\n{format_timedelta(total_time)}\n"
     file.write(total_time_text)
     print("Total Time Updated in File:", total_time_text)
