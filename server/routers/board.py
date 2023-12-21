@@ -74,6 +74,7 @@ async def getBoard(id:int):
             b.createdAt,
             b.viewCount,
             b.recommendCount,
+            b.commentCount,
             b.fileName,
             b.filePath,
             u.nickname AS writerNickname
