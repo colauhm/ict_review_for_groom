@@ -1,4 +1,4 @@
-import { authCheck, ServerUrl, getCookie } from './utils/function.js';
+import { authCheck, ServerUrl, getCookie, getUrlId } from './utils/function.js';
 
 const boardCommponent = {
     nick : document.querySelector('.nick'),
@@ -8,9 +8,15 @@ const boardCommponent = {
 
 
 
-async function getBoard(){
-
+async function getBoard(id){
+    const components = await fetch(ServerUrl() + '/board' + `?id=${id}`, {noCORS: true});
+    const data = await components.json();
+    console.log(data);
 }
 
 const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
 const myInfo = await req.json();
+const boardId = getUrlId();
+getBoard(boardId);
+
+await authCheck();

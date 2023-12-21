@@ -67,17 +67,21 @@ async def getBoards(category:str):
 @router.get("/board")
 async def getBoard(id:int):
     board = await execute_sql_query("""
-        SELECT
-            b.title AS boardTitle,
-            b.createdAt AS boardCreatedAt,
-            b.viewCount AS boardViewCount,
-            b.recommendCount AS boardRecommendCount,
-            u.nickname AS userNickname
-        FROM
+       SELECT 
+            b.id AS boardId,
+            b.title,
+            b.content,
+            b.createdAt,
+            b.viewCount,
+            b.recommendCount,
+            b.fileName,
+            b.filePath,
+            u.nickname AS writerNickname
+        FROM 
             board AS b
-        LEFT JOIN
-            user AS u
-        ON
-            b.boardId = %s
+        JOIN 
+            user AS u ON b.writerId = u.idx
+        WHERE 
+            b.id = %s;
         """, (id,))
     return board

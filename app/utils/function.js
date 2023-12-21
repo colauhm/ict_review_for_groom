@@ -71,6 +71,17 @@ export const ServerUrl = () => {
     return 'http://localhost:8088/api';
 };
 
+export const getUrlId = () => {
+    const url = new URL(window.location.href);
+
+    const param = url.searchParams;
+    const idValue = param.get('id');
+
+    console.log(idValue);
+
+    return idValue;
+}
+
 /**
  *
  * @param {string} param
