@@ -26,29 +26,33 @@
 
 ## 보드 테이블 
 ### CREATE TABLE board
-    id        INT NOT NULL auto_increment,
-    title     VARCHAR(255) DEFAULT NULL,
-    content   TEXT,
-    createdAt DATETIME DEFAULT NULL,
-    updatedAt DATETIME DEFAULT NULL,
-    writerId  INT DEFAULT NULL,
-    viewCount INT DEFAULT NULL,
+    id             INT NOT NULL auto_increment,
+    title          VARCHAR(255) DEFAULT NULL,
+    content        TEXT,
+    createdAt      DATETIME DEFAULT NULL,
+    updatedAt      DATETIME DEFAULT NULL,
+    writerId       INT DEFAULT NULL,
+    viewCount      INT DEFAULT NULL,
     recommendCount INT DEFAULT NULL,
-    type      VARCHAR(255) DEFAULT NULL,
-    fileName  VARCHAR(255) DEFAULT NULL,
-    filePath  VARCHAR(255) DEFAULT NULL,
+    commentCount   INT DEFAULT NULL,
+    type           VARCHAR(255) DEFAULT NULL,
+    fileName       VARCHAR(255) DEFAULT NULL,
+    filePath       VARCHAR(255) DEFAULT NULL,
     PRIMARY KEY (id)
 
 ## 댓글 테이블
 ### CREATE TABLE comment  
-	idx int NOT NULL AUTO_INCREMENT,
-	boardId int DEFAULT NULL,
-	writerId int DEFAULT NULL,
-	content text,
+	idx       int NOT NULL AUTO_INCREMENT,
+	boardId   int DEFAULT NULL,
+	writerId  int DEFAULT NULL,
+	content   text,
 	createdAt datetime DEFAULT NULL,
 	PRIMARY KEY (idx) 
 
-## 추천 테이블
-### CREATE TABLE recommend 
-	userId INT DEFAULT NULL,
-    boardId INT DEFAULT NULL
+## 최근조회 시각 및 추천여부 테이블
+### CREATE TABLE status
+     userId     		INT DEFAULT NULL,
+     boardId    		INT DEFAULT NULL,
+     recommendStatus    BOOLEAN DEFAULT NULL,
+     viewStatus 		DATETIME DEFAULT NULL
+
