@@ -53,6 +53,6 @@
 ### CREATE TABLE status
      userId     		INT DEFAULT NULL,
      boardId    		INT DEFAULT NULL,
-     recommendStatus    BOOLEAN DEFAULT NULL,
+     recommendStatus     BOOLEAN DEFAULT NULL,
      viewStatus 		DATETIME DEFAULT NULL
 
