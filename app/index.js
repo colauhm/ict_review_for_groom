@@ -1,14 +1,30 @@
 import { authCheck, ServerUrl, getCookie } from './utils/function.js';
 import { BoardItem } from './components/boardItem.js';
 const requestBoardListType = {
-    category : 'free',
-    sortMethod : 'createdAt'
+    category : 'notice',
+    sortMethod : 'boardCreatedAt'
 }
 
 const searchBoardListType = {
     category : 'all',
     datailCategory : 'title',
     searchContent : ''
+}
+
+
+//--------------------버튼 선택시 다른 버튼은 선택버튼 활성화 나머지버튼 활성화 기능-----------//
+
+function setupButtons(searchTypeButton) {
+    Object.values(searchTypeButton).forEach(button => {
+        button.addEventListener('click', () => searchTypeChoice(button, searchTypeButton));
+    });
+}
+
+function searchTypeChoice(clickedButton, allButtons) {
+    // 클릭된 버튼을 제외한 나머지 버튼들을 활성화(disabled=false)로 설정
+    Object.values(allButtons).forEach(button => {
+        button.disabled = (button === clickedButton) ? true : false;
+    });
 }
 
 //-------------------------------게시판 선택 버튼 및 기능-----------------------------------//
@@ -26,8 +42,10 @@ const boardCategory = {
 }
 boardCategory.noticeSelector.disabled = true;
 
-Object.values(boardCategory).forEach(clickElement => {
+Object.values(boardCategory).forEach(async clickElement => {
     clickElement.addEventListener('click',BoardTypeChoice);
+    const newBoardList = await boardListLoad();
+    setBoardItem(newBoardList);
 });
 
 const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector');
@@ -39,10 +57,10 @@ secretQnABoardSelector.addEventListener('change', function(){
     } else{
         sortTypebutton.viewSorter.style.display = 'block';
     }
-    console.log(requestBoardListType)
+    //console.log(requestBoardListType)
 })
 
-function BoardTypeChoice(){
+async function BoardTypeChoice(){
     authCheck();
     const boardTypebuttonId = this.id;
     requestBoardListType.category = this.name;
@@ -55,7 +73,10 @@ function BoardTypeChoice(){
     }
     Object.values(boardCategory).forEach(button => {button.disabled = false;});
     boardCategory[boardTypebuttonId].disabled = true;
-    console.log(requestBoardListType)
+    //console.log(requestBoardListType)
+    //console.log(boardList);
+    const newBoardList = await boardListLoad();
+    setBoardItem(newBoardList);
 }
 
 //---------------------------------------정렬 선택 부분----------------------------------------//
@@ -71,14 +92,16 @@ Object.values(sortTypebutton).forEach(button => {
     button.addEventListener('click', sortTypeChoice);
 });
 
-function sortTypeChoice() {
+async function sortTypeChoice() {
     const sortTypebuttonId = this.id;
     requestBoardListType.sortMethod = this.name
     Object.values(sortTypebutton).forEach(button => {
         button.disabled = false;
     });
     sortTypebutton[sortTypebuttonId].disabled = true;
-    console.log(requestBoardListType)
+    //console.log(requestBoardListType);
+    const newBoardList = await boardListLoad();
+    setBoardItem(newBoardList);
 }
 
 //-------------------------------------검색 기준 선택 부분-------------------------------------//
@@ -102,7 +125,7 @@ function searchTypeChoice() {
         button.disabled = false;
     });
     searchTypeButton[searchTypebuttonname].disabled = true;
-    console.log(searchBoardListType);
+    //console.log(searchBoardListType);
 }
 
 const searchDetailTypebutton = {
@@ -123,21 +146,23 @@ function searchDetailTypeChoice(){
         button.disabled = false;
     });
     searchDetailTypebutton[searchDetailTypebuttonName].disabled = true;
-    console.log(searchBoardListType);
+    //console.log(searchBoardListType);
 }
 //--------------------------------------보드 요소 불러오기---------------------------------------//
 
 
 async function boardListLoad(){
-    const {category} = requestBoardListType;
-    const boardList = await fetch(ServerUrl() + '/boards' + `?category=${category}` + `?sortType=${sortMethod}`, {noCORS: true });
+    const {category, sortMethod} = requestBoardListType;
+    console.log(requestBoardListType);
+    const boardList = await fetch(ServerUrl() + '/boards' + `?category=${category}` + `&sortType=${sortMethod}`, {noCORS: true });
     const data = await boardList.json();
-    console.log(data);
+    //console.log(data);
     return data;
 }
 const setBoardItem = async (boardData) => {
     const boardList = document.querySelector('.boardList');
     if (boardList && boardData) {
+        boardList.innerHTML = '';
         boardList.innerHTML = boardData
             .map((data) => {
                 return BoardItem(data.boardId, data.boardCreatedAt, data.boardTitle, data.boardViewCount, data.boardRecommendCount, data.userNickname);
