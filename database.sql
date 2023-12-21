@@ -34,7 +34,7 @@ CREATE TABLE comment (
 	createdAt datetime DEFAULT NULL,
 	PRIMARY KEY (idx) 
 );
-CREATE TABLE recommend (
+CREATE TABLE status (
 	userId     		INT DEFAULT NULL,
     boardId    		INT DEFAULT NULL,
 	recommendStatus BOOLEAN DEFAULT NULL,

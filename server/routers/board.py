@@ -50,6 +50,7 @@ async def getBoards(category:str):
             b.writerId AS boardWriterId,
             b.viewCount AS boardViewCount,
             b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,                         
             u.nickname AS userNickname
         FROM
             board AS b
