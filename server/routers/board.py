@@ -32,8 +32,8 @@ async def addBoard(data: AddBoard, session: Annotated[str, Header()] = None):
     today = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     # print(today)
     # 게시글 추가 로직 board 테이블에 게시글을 추가한다.
-    res = await execute_sql_query("INSERT INTO board (title, content, createdAt, viewCount, recommendCount, fileName, filePath, type, writerId) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", 
-                                                                            (data.title, data.content, today, 0, 0, data.fileName, data.filePath, data.type, info.idx,))
+    res = await execute_sql_query("INSERT INTO board (title, content, createdAt, viewCount, recommendCount, commentCount, fileName, filePath, type, writerId) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", 
+                                                                            (data.title, data.content, today, 0, 0, 0, data.fileName, data.filePath, data.type, info.idx,))
     # 게시글 마지막 idx 조회
     res = await execute_sql_query("SELECT MAX(id) AS id FROM board")
 
@@ -41,7 +41,7 @@ async def addBoard(data: AddBoard, session: Annotated[str, Header()] = None):
     return 200, {'message': res[0]['id']}
 
 @router.get("/boards")
-async def getBoards(category:str):
+async def getBoards(category:str, sortType:str):
     boards = await execute_sql_query("""
         SELECT
             b.id AS boardId,
@@ -61,8 +61,8 @@ async def getBoards(category:str):
         WHERE
             b.type = %s
         ORDER BY
-            b.createdAt DESC;
-        """,(category,))
+            %s DESC;
+        """,(category,sortType,))
     return boards
 
 @router.get("/board")

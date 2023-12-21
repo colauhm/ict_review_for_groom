@@ -130,7 +130,7 @@ function searchDetailTypeChoice(){
 
 async function boardListLoad(){
     const {category} = requestBoardListType;
-    const boardList = await fetch(ServerUrl() + '/boards' + `?category=${category}` /*+ `?sortType=${sortMethod}`*/, {noCORS: true });
+    const boardList = await fetch(ServerUrl() + '/boards' + `?category=${category}` + `?sortType=${sortMethod}`, {noCORS: true });
     const data = await boardList.json();
     console.log(data);
     return data;
@@ -158,5 +158,6 @@ boardCategory.noticeSelector.disabled = managerCheck;
 const boardList = await boardListLoad();
 setBoardItem(boardList)
 
+document.addEventListener('DOMContentLoaded', setBoardItem(boardList));
 
 authCheck();
