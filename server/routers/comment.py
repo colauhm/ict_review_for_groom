@@ -14,7 +14,7 @@ class Comment(BaseModel):
 @router.post("/comment")
 async def addComment(data:Comment, session: Annotated[str, Header()] = None):
     info = await getSessionData(session)
-    print(data.boardId, data.content, info.idx, today)
+    
     
     today = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     if info is None:
@@ -31,7 +31,7 @@ async def addComment(data:Comment, session: Annotated[str, Header()] = None):
         return 200, {'message': '댓글이 추가되었습니다.'}
 
 @router.get("/comment")
-async def getComment(id:int):
+async def getComment(id:int, last:bool):
     comments = await execute_sql_query("""
                 SELECT 
                     c.idx AS idx, 
@@ -49,7 +49,7 @@ async def getComment(id:int):
                     c.boardId = %s 
                 ORDER  BY
                     c.createdAt DESC """, (id,))
-    if comments is None:
-        return 400, {"message": "댓글 목록 불러오기에 실패하였습니다."}
+    if last:
+        return comments[0]
     else:
-        return 200, {'message': comments}
+        return comments

@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 });
 
-    addCommentButton.addEventListener('click', async () => {
-        const content = comment.value;
-        addComment(boardId, content);
-        const commentList = await getComment(boardId);
-        await setComment(commentList);
-    });
+addCommentButton.addEventListener('click', async () => {
+    await addComment();
+    const newCommentList = await getComment(true);
+    addNewComment(newCommentList);
+});
+
 
 async function getBoard(id) {
     const components = await fetch(ServerUrl() + '/board' + `?id=${id}`, { noCORS: true });
@@ -41,10 +41,10 @@ async function getBoard(id) {
     return data;
 }
 
-async function addComment(boardId, comment){
+async function addComment(){
     const content = {
-        boardId : boardId, 
-        comment : comment
+        boardId : getUrlId(),
+        content : comment.value
     }
     console.log(content);
     const response = await fetch(ServerUrl() + '/comment', {
@@ -59,9 +59,9 @@ async function addComment(boardId, comment){
     console.log(result);
 }
 
-async function getComment(){
+async function getComment(last){
     const boardId = getUrlId();
-    const commentElement = await fetch(ServerUrl() + '/comment' + '?id=1', {noCORS: true});
+    const commentElement = await fetch(ServerUrl() + '/comment' + `?id=${boardId}` +`&&last=${last}`, {noCORS: true});
     const data = await commentElement.json();
     return data; 
 }
@@ -69,6 +69,8 @@ async function getComment(){
 const setComment = async (commentData) => {
     const commentList = document.querySelector('.commentList');
     if (commentList && commentData) {
+        console.log(commentData);
+        commentList.innerHTML = '';
         commentList.innerHTML = commentData
             .map((data) => {
                 return commentItem(data.createdAt, data.writerNickname, data.content);
@@ -76,7 +78,15 @@ const setComment = async (commentData) => {
             .join('');
     }
 };
-const commentList = await getComment();
-setComment(commentList);
+
+const addNewComment = (newCommentData) => {
+    const commentList = document.querySelector('.commentList');
+    const addCommentData = commentItem(newCommentData.createdAt, newCommentData.writerNickname, newCommentData.content);
+    commentList.insertAdjacentHTML('afterbegin', addCommentData);
+};
+
+const commentList = await getComment(false);
+// setComment(commentList);
+document.addEventListener('DOMContentLoaded', setComment(commentList));
 const myInfo = await authCheck();
 

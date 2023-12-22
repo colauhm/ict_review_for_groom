@@ -133,6 +133,7 @@ async function boardListLoad(){
 const setBoardItem = async (boardData) => {
     const boardList = document.querySelector('.boardList');
     if (boardList && boardData) {
+        console.log(boardData);
         boardList.innerHTML = '';
         boardList.innerHTML = boardData
             .map((data) => {
@@ -148,5 +149,5 @@ const setBoardItem = async (boardData) => {
 const myInfo = await authCheck();
 
 const boardList = await boardListLoad();
-setBoardItem(boardList)
+setBoardItem(boardList);
 document.addEventListener('DOMContentLoaded', setBoardItem(boardList));
