@@ -96,8 +96,8 @@ async function postOrCancel(){
     } else if (boardComponent.title && boardComponent.content) {
         
         postWriteData();
-        //alert('작성완료 메인페이지로 이동합니다.');
-        //window.location.href = "/";
+        alert('작성완료 메인페이지로 이동합니다.');
+        window.location.href = "/";
     } else {
         alert('필요내용을 전부 작성하지 않았습니다.');
     }
