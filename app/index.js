@@ -144,14 +144,9 @@ const setBoardItem = async (boardData) => {
 
 //--------------------------------세션 유무에 따라 보이는 버튼 다르게-----------------------------//
 
-const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
-const myInfo = await req.json();
-const managerCheck = myInfo.type ? false : true;
-boardCategory.noticeSelector.disabled = managerCheck;
+
+const myInfo = await authCheck();
 
 const boardList = await boardListLoad();
 setBoardItem(boardList)
-
 document.addEventListener('DOMContentLoaded', setBoardItem(boardList));
-
-await authCheck();

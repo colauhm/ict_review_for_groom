@@ -11,14 +11,15 @@ class Comment(BaseModel):
     boardId: int
     content: str
 
-@router.post('/comment')
+@router.post("/comment")
 async def addComment(data:Comment, session: Annotated[str, Header()] = None):
-
     info = await getSessionData(session)
+    print(data.boardId, data.content, info.idx, today)
+    
     today = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     if info is None:
             return 401, {"message": "로그인이 필요합니다."}
-
+    print(data.boardId, data.content, info.idx, today)
     # 댓글 추가 로직
     res = await execute_sql_query("""
             INSERT INTO
@@ -29,14 +30,15 @@ async def addComment(data:Comment, session: Annotated[str, Header()] = None):
     else:
         return 200, {'message': '댓글이 추가되었습니다.'}
 
-@router.get('/comment')
-async def getComment(boardId:int):
+@router.get("/comment")
+async def getComment(id:int):
     comments = await execute_sql_query("""
                 SELECT 
-                    c.idx AS idx, c.content AS content,
+                    c.idx AS idx, 
+                    c.content AS content,
                     c.writerId AS writerId, 
                     c.createdAt AS createdAt, 
-                    u.nickname  AS writerNickname, 
+                    u.nickname  AS writerNickname
                 FROM 
                     comment AS c 
                 left join 
@@ -46,7 +48,7 @@ async def getComment(boardId:int):
                 WHERE  
                     c.boardId = %s 
                 ORDER  BY
-                    c.createdAt DESC """, (boardId,))
+                    c.createdAt DESC """, (id,))
     if comments is None:
         return 400, {"message": "댓글 목록 불러오기에 실패하였습니다."}
     else:

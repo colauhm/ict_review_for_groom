@@ -15,14 +15,12 @@ export const commentItem = (date, writer, content) =>{
     // 날짜와 시간을 합쳐서 YYYY-MM-DD hh:mm:ss
     const dateTimeStr = `${dateStr} ${timeStr}`;
     return`
-    <div class="boardItem">
+    <div class="commentItem">
         <div class="info">
-            <h3 class="content">추천수 <b>${content}</b></h3>
+            <h2 class="writer">${writer}</h2>
+            <p class="content">${content}</p>
             <p class="date">${dateTimeStr}</p>
         </div>
-        <div class="writerInfo">
-            <h2 class="writer">${writer}</h2>
-        </div>
     </div>
-    `
-}
+    `;
+};

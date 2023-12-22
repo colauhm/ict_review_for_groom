@@ -39,7 +39,7 @@ export const authCheck = async () => {
     }
 
     const data = await serverSessionCheck();
-    console.log(data);
+    //console.log(data);
     if (!data) {
         deleteCookie('session');
        
@@ -77,7 +77,7 @@ export const getUrlId = () => {
     const param = url.searchParams;
     const idValue = param.get('id');
 
-    console.log(idValue);
+    //console.log(idValue);
 
     return idValue;
 }
