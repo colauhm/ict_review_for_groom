@@ -95,7 +95,7 @@ function QnAcheck(boardType){
 }
 
 function secretQnAcheck(boardType){
-    requestBoardListType.category = secretCheckBox.checked ? 'QnA':'secretQnA';
+    requestBoardListType.category = secretCheckBox.checked ? 'secretQnA':'QnA';
     if (boardType == 'secretQnA'){
         sortTypebutton.viewSorter.style.display = 'none';
     } else {

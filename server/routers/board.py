@@ -10,8 +10,8 @@ class AddBoard(BaseModel):
     title : str
     content : str
     type : str
-    fileName : str
-    filePath : str
+    fileName : Optional[str]
+    filePath : Optional[str]
 
 class modifyBoard(BaseModel):
     id: int
@@ -26,13 +26,14 @@ router = APIRouter(prefix="/api")
 @router.post("/postBoard")
 async def addBoard(data: AddBoard, session: Annotated[str, Header()] = None):
     
-    # print(data.title, data.content, data.session)
+
     info = await getSessionData(session)
     
     today = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    # print(today)
+    #print(data.title, data.content, today, 0, 0, 0, data.fileName, data.filePath, data.type)
     # 게시글 추가 로직 board 테이블에 게시글을 추가한다.
-    res = await execute_sql_query("INSERT INTO board (title, content, createdAt, viewCount, recommendCount, commentCount, fileName, filePath, type, writerId) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", 
+    res = await execute_sql_query("""INSERT INTO board (title, content, createdAt, viewCount, recommendCount, commentCount, fileName, filePath, type, writerId) 
+                                                                                                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""", 
                                                                             (data.title, data.content, today, 0, 0, 0, data.fileName, data.filePath, data.type, info.idx,))
     # 게시글 마지막 idx 조회
     res = await execute_sql_query("SELECT MAX(id) AS id FROM board")

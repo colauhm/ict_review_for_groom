@@ -13,39 +13,67 @@ const boardComponent = {
     filePath: '',
 }
 
+const selectBoardButton = document.querySelector('.selectBoardButton');
+const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector');
+const secretTypeButton = document.getElementById('secretTypeButton');
+const secretCheckBox = document.getElementById('secretCheckBox');
+
 const boardCategory = {
-    noticeSelector :  document.getElementById('noticeSelector'),
+    noticeSelector : document.getElementById('noticeSelector'),
     freeBoardSelector :  document.getElementById('freeBoardSelector'),
     QnABoardSelector :  document.getElementById('QnABoardSelector'),
 }
 
-//-----------------------------------게시글 유형 선택-------------------------------------------//
+const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
+const myInfo = await req.json();
+const managerCheck = myInfo.type ? false : true;
 
-Object.values(boardCategory).forEach(clickElement => {
-    clickElement.addEventListener('click',typeChoice);
+
+async function setupNoticeButton(){
+    boardCategory.freeBoardSelector.disabled = managerCheck;
+    boardCategory.noticeSelector.disabled = managerCheck;
+}
+
+
+
+function setupButtons(typeButton, listType, methodKey) {
+    Object.values(typeButton).forEach(button => {
+        button.addEventListener('click', async () => {
+            const selectedButtonName = await typeChoice(button, typeButton);
+            listType[methodKey] = selectedButtonName;
+        });
+    });
+}
+
+async function typeChoice(clickedButton, allButtons) {
+    // 클릭된 버튼을 제외한 나머지 버튼들을 활성화(disabled=false)로 설정
+    Object.values(allButtons).forEach(button => {
+        button.disabled = (button === clickedButton) ? true : false;
+    });
+    boardCategory.noticeSelector.disabled = managerCheck;
+    return clickedButton.name;
+}
+
+selectBoardButton.addEventListener('click', async () => {
+    QnAcheck(boardComponent.type);
 });
 
-const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector');
-
-secretQnABoardSelector.addEventListener('change', function(){
-    boardComponent.type =  boardComponent.type == 'QnA'? 'secretQnA':'QnA';
-})
-
-function typeChoice(){
-    
-    const typebuttonId = this.id;
-    boardComponent.type = this.name;
-  
-    if (typebuttonId == "QnABoardSelector"){
+function QnAcheck(boardType){
+    if (boardType == 'QnA' || boardType == 'secretQnA'){
         secretQnABoardSelector.style.display = 'block';
+        boardComponent.type = secretCheckBox.checked ? 'secretQnA':'QnA';
+        
     } else {
         secretQnABoardSelector.style.display = 'none';
     }
-    Object.values(boardCategory).forEach(button => {button.disabled = false;});
-    boardCategory[typebuttonId].disabled = true;
-    boardCategory.noticeSelector.disabled = managerCheck;
 
+    
 }
+//-----------------------------------게시글 유형 선택-------------------------------------------//
+
+setupButtons(boardCategory, boardComponent, 'type');
+secretTypeButton.disabled = true;
+
 
 //------------------------------------게시글 작성 요청---------------------------------------//
 
@@ -118,7 +146,7 @@ async function uploadFile(formData) {
 }
 async function postWriteData(){
     const {...props} = boardComponent;
-
+    console.log(props);
     const response = await fetch(ServerUrl() + '/postBoard', {
         method: 'POST',
         headers: {
@@ -136,12 +164,8 @@ async function postWriteData(){
 //-----------------------------------------------------------------------------//
 
 
-const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
-const myInfo = await req.json();
-const managerCheck = myInfo.type ? false : true;
-boardCategory.noticeSelector.disabled = managerCheck;
-boardCategory.freeBoardSelector.disabled = managerCheck;
+
 
 await authCheck();
-
+await setupNoticeButton();
 
