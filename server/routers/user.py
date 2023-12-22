@@ -71,13 +71,14 @@ class Login(BaseModel):
 @router.post('/signup')
 async def signup(data:Signup):
     try:
+        today = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         res = await execute_sql_query(
             "SELECT * FROM user WHERE id = %s", (data.id,))
         if len(res) != 0:
             return 401, "중복된 아이디가 있습니다."
         else:
-            await execute_sql_query("INSERT INTO user (email, id, password, nickname) VALUES (%s, %s, %s, %s)",
-                                    (data.email, data.id, hashlib.sha256(data.password.encode()).hexdigest(), data.nickname,))
+            await execute_sql_query("INSERT INTO user (email, id, password, nickname, createdAt) VALUES (%s, %s, %s, %s, %s)",
+                                    (data.email, data.id, hashlib.sha256(data.password.encode()).hexdigest(), data.nickname, today))
             return 200, {"message": "signup success"}
         
     except Exception as e:
