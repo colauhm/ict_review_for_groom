@@ -108,7 +108,7 @@ document.getElementById('signupBtn').addEventListener('click', async function ()
             await postSignupData();
             alert('회원가입 성공 로그인 페이지로 이동합니다.');
             // 모든 값이 채워져 있다면 /login.html로 이동
-            //window.location.href = '/login.html';
+            window.location.href = '/login.html';
         } else {
             alert('입력하신 정보를 다시 확인해 주세요.');
         }
