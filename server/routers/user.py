@@ -96,7 +96,7 @@ async def login(data: Login, response: Response):
         else:
             userInfo = res[0]
             sessionId = await createSession(
-                userInfo['email'], userInfo['id'], userInfo['nickname'], userInfo['idx'])
+                userInfo['email'], userInfo['id'], userInfo['nickname'], userInfo['idx'], userInfo['power'])
             return 200, sessionId
     except Exception as e:
         print(e)

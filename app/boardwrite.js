@@ -26,12 +26,14 @@ const boardCategory = {
 
 const req = await fetch(ServerUrl() + '/checkSession', { headers: { session: getCookie('session') } });
 const myInfo = await req.json();
-const managerCheck = myInfo.type ? false : true;
+const managerCheck = myInfo.power ? false : true;
+console.log(managerCheck);
+console.log(myInfo.power);
 
 
 async function setupNoticeButton(){
     boardCategory.freeBoardSelector.disabled = managerCheck;
-    boardCategory.noticeSelector.disabled = managerCheck;
+    boardCategory.noticeSelector.disabled = true;
 }
 
 
@@ -50,7 +52,9 @@ async function typeChoice(clickedButton, allButtons) {
     Object.values(allButtons).forEach(button => {
         button.disabled = (button === clickedButton) ? true : false;
     });
-    boardCategory.noticeSelector.disabled = managerCheck;
+    if (managerCheck){
+        boardCategory.noticeSelector.disabled = managerCheck;
+    }
     return clickedButton.name;
 }
 
