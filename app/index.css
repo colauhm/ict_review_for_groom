@@ -7,3 +7,6 @@ div{
     display: flex;
 }
 
+#logout{
+    display: none;
+}

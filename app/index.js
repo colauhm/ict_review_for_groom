@@ -40,18 +40,21 @@ const selectBoardButtons = document.querySelector('.selectBoardButtons');
 const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector');
 const secretTypeButton = document.getElementById('secretTypeButton');
 const secretCheckBox = document.getElementById('secretCheckBox');
+const logoutButton = document.getElementById('logout');
 
 //--------------------버튼 선택시 다른 버튼은 선택버튼 활성화 나머지버튼 활성화 기능-----------//
 
-function setupButtons(typeButton, listType, methodKey) {
+function setupButtons(firstButton, typeButton, listType, methodKey) {
+    firstButton.disabled = true;
     Object.values(typeButton).forEach(button => {
         button.addEventListener('click', async () => {
+            console.log(button, typeButton);
             const selectedButtonName = await typeChoice(button, typeButton);
             listType[methodKey] = selectedButtonName;
             const newBoardList = await boardListLoad();
             setBoardItem(newBoardList);
-            console.log(requestBoardListType);
-            console.log(searchBoardListType);
+            //console.log(requestBoardListType);
+            //console.log(searchBoardListType);
         });
     });
 }
@@ -61,6 +64,7 @@ async function typeChoice(clickedButton, allButtons) {
     Object.values(allButtons).forEach(button => {
         button.disabled = (button === clickedButton) ? true : false;
     });
+    console.log(clickedButton.name);
     return clickedButton.name;
 }
 
@@ -70,55 +74,49 @@ document.getElementById('writePost').addEventListener('click', function (){
     window.location.href = "/boardwrite.html";
 })
 
-boardCategory.noticeSelector.disabled = true;
 secretTypeButton.disabled = true;
 
-setupButtons(boardCategory, requestBoardListType, 'category');
+setupButtons(boardCategory.noticeSelector, boardCategory, requestBoardListType, 'category');
 
 selectBoardButtons.addEventListener('click', async () => {
     QnAcheck(requestBoardListType.category);
+    typeChoice(sortTypebutton.recentSorter, sortTypebutton)
     await authCheck();
 });
+QnAcheck(requestBoardListType.category);
 
 function QnAcheck(boardType){
     if (boardType == 'QnA' || boardType == 'secretQnA'){
         secretQnABoardSelector.style.display = 'block';
         sortTypebutton.recommendSorter.style.display = 'none';
-        secretQnAcheck(boardType);
+        secretQnAcheck();
         
     } else {
         secretQnABoardSelector.style.display = 'none';
-        sortTypebutton.recommendSorter.style.display = 'block';
-        
+        sortTypebutton.recommendSorter.style.display = boardType == 'notice'? 'none':'block';
+        sortTypebutton.viewSorter.style.display = boardType == 'notice'? 'none':'block';
     }
     
 }
 
-function secretQnAcheck(boardType){
+function secretQnAcheck(){
     requestBoardListType.category = secretCheckBox.checked ? 'secretQnA':'QnA';
-    if (boardType == 'secretQnA'){
-        sortTypebutton.viewSorter.style.display = 'none';
-    } else {
-        sortTypebutton.viewSorter.style.display = 'block';
-    }
+    //console.log( requestBoardListType.category);
+
+    sortTypebutton.viewSorter.style.display = requestBoardListType.category == 'secretQnA'?'none':'block';
+
 }
 
 //---------------------------------------정렬 선택 부분----------------------------------------//
 
 
-sortTypebutton.recentSorter.disabled = true;
-
-setupButtons(sortTypebutton, requestBoardListType, 'sortMethod');
+setupButtons(sortTypebutton.recentSorter, sortTypebutton, requestBoardListType, 'sortMethod');
 
 //-------------------------------------검색 기준 선택 부분-------------------------------------//
 
-searchTypeButton.all.disabled = true;
 
-setupButtons(searchTypeButton, searchBoardListType, 'category');
-
-searchDetailTypebutton.title.disabled = true;
-
-setupButtons(searchDetailTypebutton, searchBoardListType, 'datailCategory');
+setupButtons(searchTypeButton.all, searchTypeButton, searchBoardListType, 'category');
+setupButtons(searchDetailTypebutton.title, searchDetailTypebutton, searchBoardListType, 'datailCategory');
 
 //--------------------------------------보드 요소 불러오기---------------------------------------//
 
@@ -133,6 +131,7 @@ async function boardListLoad(){
 const setBoardItem = async (boardData) => {
     const boardList = document.querySelector('.boardList');
     if (boardList && boardData) {
+        //
         console.log(boardData);
         boardList.innerHTML = '';
         boardList.innerHTML = boardData
