@@ -68,7 +68,7 @@ export const prependChild = (parent, child) => {
 };
 
 export const ServerUrl = () => {
-    return 'https://codeconnection-tvbbi2-8088.run.goorm.io/api';
+    return 'https://server-8088.run.goorm.io/api';
 };
 
 export const getUrlId = () => {

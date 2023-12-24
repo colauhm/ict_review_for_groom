@@ -15,10 +15,10 @@ import pymysql.cursors
 async def execute_sql_query(query: str, params: tuple = None):
     try:
         connection = pymysql.connect(
-            host="54.180.96.26",
-            user="root",
-            port=54548,
-            password="1234",
+            host="13.125.245.156",
+            user="user",
+            port=51393,
+            password="5464",
             db="connection",
             cursorclass=pymysql.cursors.DictCursor)
         with connection.cursor() as cursor:
