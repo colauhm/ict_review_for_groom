@@ -1,0 +1,110 @@
+172.17.0.1 - - [24/Dec/2023 13:23:20] "GET /utils/function.js HTTP/1.1" 200 -
+INFO:     Will watch for changes in these directories: ['/workspace/codeconnection']
+ERROR:    [Errno 98] Address already in use
+INFO:     Will watch for changes in these directories: ['/workspace/codeconnection']
+ERROR:    [Errno 98] Address already in use
+172.17.0.1 - - [24/Dec/2023 13:26:15] "GET / HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:26:15] "GET /index.css HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:26:15] "GET /index.js HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:26:15] "GET /components/boardItem.js HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:26:15] "GET /login.html HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:26:16] "GET /login.js HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:26:17] "GET /signup.html HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:26:17] "GET /signlogin.css HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:26:17] "GET /signup.js HTTP/1.1" 304 -
+INFO:     Will watch for changes in these directories: ['/workspace/codeconnection']
+ERROR:    [Errno 98] Address already in use
+INFO:     Will watch for changes in these directories: ['/workspace/codeconnection']
+ERROR:    [Errno 98] Address already in use
+172.17.0.1 - - [24/Dec/2023 13:27:32] "GET /utils/function.js HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.5/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/root/.pyenv/versions/3.9.5/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/root/.pyenv/versions/3.9.5/lib/python3.9/http/server.py", line 1289, in <module>
+    test(
+  File "/root/.pyenv/versions/3.9.5/lib/python3.9/http/server.py", line 1244, in test
+    with ServerClass(addr, HandlerClass) as httpd:
+  File "/root/.pyenv/versions/3.9.5/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/root/.pyenv/versions/3.9.5/lib/python3.9/http/server.py", line 1287, in server_bind
+    return super().server_bind()
+  File "/root/.pyenv/versions/3.9.5/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/root/.pyenv/versions/3.9.5/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+172.17.0.1 - - [24/Dec/2023 13:30:03] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:30:04] "GET /index.css HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:30:04] "GET /index.js HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:30:04] "GET /components/boardItem.js HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:30:04] "GET /utils/function.js HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:30:05] "GET /login.html HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:30:06] "GET /login.js HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:30:06] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 13:30:06] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 13:30:07] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 13:30:07] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 13:30:07] "GET /signup.html HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:30:07] "GET /signup.js HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:30:07] "GET /signlogin.css HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:30:07] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 13:30:07] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 13:30:07] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 13:30:07] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 13:31:16] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:17] "GET /utils/function.js HTTP/1.1" 304 -
+172.17.0.1 - - [24/Dec/2023 13:31:24] "GET /signup.html HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:24] "GET /signup.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:24] "GET /signlogin.css HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:24] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:24] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 13:31:24] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 13:31:24] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 13:31:24] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 13:31:27] "GET /login.html HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:27] "GET /login.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:27] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:27] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 13:31:27] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 13:31:27] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 13:31:27] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 13:31:34] "GET /signup.html HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:34] "GET /signup.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:34] "GET /signlogin.css HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:34] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:34] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 13:31:34] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 13:31:35] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 13:31:35] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 13:31:56] "GET /login.html HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:56] "GET /login.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:56] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:56] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 13:31:56] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 13:31:56] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 13:31:56] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 13:31:58] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:58] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:58] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:59] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:31:59] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:11] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:11] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:11] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:11] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:12] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:12] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:12] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:12] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:12] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:14] "GET /board.html?id=2 HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:14] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:14] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:14] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:15] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:15] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:15] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:15] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 13:32:15] "GET /utils/function.js HTTP/1.1" 200 -

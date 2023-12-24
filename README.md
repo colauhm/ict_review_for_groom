@@ -10,6 +10,15 @@
 # 실행 명령어
      uvicorn server.main:app --reload --host=0.0.0.0 --port=8088
      python -m http.server 80 -d ./app
+     
+     nohup uvicorn server.main:app --host 0.0.0.0 --port 8088 &
+     nohup python -m http.server 80 -d ./app &
+ 
+     pkill -f "python -m http.server 80 -d ./app"
+     pkill -f "uvicorn server.main:app --host 0.0.0.0 --port 8088"
+     
+     ps aux | grep "uvicorn server.main:app --host 0.0.0.0 --port 8088"
+
 
 ## 유저 테이블
 ### CREATE TABLE user
