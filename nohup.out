@@ -170,3 +170,129 @@ INFO:     172.17.0.1:60726 - "GET /api/boards?category=notice&sortType=boardCrea
 INFO:     172.17.0.1:60726 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
 INFO:     172.17.0.1:60726 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
 INFO:     172.17.0.1:60726 - "GET /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [24/Dec/2023 19:07:17] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 19:07:17] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 19:07:17] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 19:07:17] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 19:07:17] "GET /utils/function.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:46622 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46622 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46622 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46622 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46622 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46622 - "GET /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [24/Dec/2023 19:07:18] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 19:07:18] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 19:07:19] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 19:07:19] "GET /utils/function.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:46622 - "GET /api/comment?id=1&&last=false HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46622 - "GET /api/board?id=1 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46622 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46622 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46622 - "OPTIONS /api/comment HTTP/1.1" 200 OK
+1 test 1 2023-12-24 19:07:21
+INFO:     172.17.0.1:46622 - "POST /api/comment HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46622 - "GET /api/comment?id=1&&last=true HTTP/1.1" 200 OK
+172.17.0.1 - - [24/Dec/2023 19:07:54] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [24/Dec/2023 19:07:55] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 19:07:55] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [24/Dec/2023 19:07:55] code 404, message File not found
+172.17.0.1 - - [24/Dec/2023 19:07:55] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:     Started server process [3661]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8088 (Press CTRL+C to quit)
+172.17.0.1 - - [25/Dec/2023 05:34:44] "GET / HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:34:44] "GET /index.css HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:34:44] "GET /index.js HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:34:44] "GET /utils/function.js HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:34:44] "GET /components/boardItem.js HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:34:44] "GET /login.html HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:34:45] "GET /login.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:49758 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [25/Dec/2023 05:34:48] "GET / HTTP/1.1" 200 -
+INFO:     172.17.0.1:49758 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49758 - "GET /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [25/Dec/2023 05:34:48] "GET /login.html HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:34:50] code 404, message File not found
+172.17.0.1 - - [25/Dec/2023 05:34:50] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [25/Dec/2023 05:34:50] code 404, message File not found
+172.17.0.1 - - [25/Dec/2023 05:34:50] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:     172.17.0.1:49758 - "OPTIONS /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49758 - "POST /api/login HTTP/1.1" 200 OK
+172.17.0.1 - - [25/Dec/2023 05:34:51] "GET /index.html HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:34:51] "GET /index.js HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:34:51] "GET /utils/function.js HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:34:51] "GET /components/boardItem.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:49758 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49758 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49758 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49758 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [25/Dec/2023 05:34:54] "GET /board.html?id=1 HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:34:55] "GET /board.js HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:34:55] "GET /components/commentItem.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:49758 - "GET /api/comment?id=1&&last=false HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57632 - "GET /api/board?id=1 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57632 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57632 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57632 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49758 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49758 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57632 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57632 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57632 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57632 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [25/Dec/2023 05:35:01] "GET /boardwrite.html HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:35:01] "GET /boardwrite.js HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:35:01] "GET /boardwrite.css HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 05:35:02] "GET /index.css HTTP/1.1" 304 -
+INFO:     172.17.0.1:57632 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57632 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "OPTIONS /api/postBoard HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "POST /api/postBoard HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40954 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51798 - "GET /docs HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51798 - "GET /openapi.json HTTP/1.1" 200 OK
+172.17.0.1 - - [25/Dec/2023 07:41:50] "GET / HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 07:41:50] "GET /index.css HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 07:41:50] "GET /index.js HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 07:41:50] "GET /utils/function.js HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 07:41:50] "GET /components/boardItem.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:59352 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59352 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59352 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59352 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59352 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59352 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59352 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59352 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59368 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59368 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59368 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59368 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59352 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59352 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59352 - "GET /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [25/Dec/2023 08:15:20] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [25/Dec/2023 08:15:20] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [25/Dec/2023 08:15:20] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [25/Dec/2023 08:15:20] "GET /components/boardItem.js HTTP/1.1" 304 -
+172.17.0.1 - - [25/Dec/2023 08:15:20] "GET /utils/function.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:58252 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58252 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58252 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58252 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [25/Dec/2023 08:15:26] "GET /index.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:58252 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58252 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
