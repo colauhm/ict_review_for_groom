@@ -51,7 +51,8 @@ async def getBoards(category:str, sortType:str):
             b.writerId AS boardWriterId,
             b.viewCount AS boardViewCount,
             b.recommendCount AS boardRecommendCount,
-            b.commentCount AS boardcommentCount,                         
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
             u.nickname AS userNickname
         FROM
             board AS b
@@ -78,7 +79,9 @@ async def getBoard(id:int):
             b.commentCount,
             b.fileName,
             b.filePath,
-            u.nickname AS writerNickname
+            u.nickname AS writerNickname,
+            b.type,
+            b.writerId
         FROM 
             board AS b
         JOIN 

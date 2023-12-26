@@ -1,11 +1,8 @@
-export const BoardItem = (id, date, title, views, recommeds, writer) => {
+export const BoardItem = (id, date, title, views, recommeds, writerNickname, boardType,  userPower, userNickname) => {
     // 파라미터 값이 없으면 리턴
-    if (!date || !title || views == undefined || recommeds == undefined || !writer) {
-        // 없는 데이터 콘솔로 출력
-        // console.log(date, title, views, imgUrl, writer);
-    }
-
+ 
     // 날짜 포맷 변경 YYYY-MM-DD hh:mm:ss
+    const checkPower = userPower ? true: false;
     const dateObj = new Date(date);
     const year = dateObj.getFullYear();
     const month = dateObj.getMonth() + 1;
@@ -21,20 +18,47 @@ export const BoardItem = (id, date, title, views, recommeds, writer) => {
 
     // 날짜와 시간을 합쳐서 YYYY-MM-DD hh:mm:ss
     const dateTimeStr = `${dateStr} ${timeStr}`;
+    if (boardType == 'secretQnA' && !checkPower && writerNickname != userNickname){
+        return `
+            <a>
+                <div class="boardItem">
+                    <h2 class="title">비밀글 입니다.</h2>
+                </div>
+            </a>
+        `;
+    }
+    if (boardType == 'free'){
+        return `
+        <a href="/board.html?id=${id}">
+            <div class="boardItem">
+                <h2 class="title">${title}</h2>
+                <div class="info">
+                    <h3 class="views">조회수 <b>${views}</b></h3>
+                    <h3 class="commends">추천수 <b>${recommeds}</b></h3>
+                    <p class="date">${dateTimeStr}</p>
+                </div>
+                <div class="writerInfo">
+                    <h2 class="writer">${writerNickname}</h2>
+                </div>
+            </div>
+        </a>
+    `;
+    } else{
+        return `
+        <a href="/board.html?id=${id}">
+            <div class="boardItem">
+                <h2 class="title">${title}</h2>
+                <div class="info">
+                    <h3 class="views">조회수 <b>${views}</b></h3>
+                    <p class="date">${dateTimeStr}</p>
+                </div>
+                <div class="writerInfo">
+                    <h2 class="writer">${writerNickname}</h2>
+                </div>
+            </div>
+        </a>
+    `;
+    }
 
-    return `
-    <a href="/board.html?id=${id}">
-        <div class="boardItem">
-            <h2 class="title">${title}</h2>
-            <div class="info">
-                <h3 class="views">조회수 <b>${views}</b></h3>
-                <h3 class="commends">추천수 <b>${recommeds}</b></h3>
-                <p class="date">${dateTimeStr}</p>
-            </div>
-            <div class="writerInfo">
-                <h2 class="writer">${writer}</h2>
-            </div>
-        </div>
-    </a>
-`;
+
 };

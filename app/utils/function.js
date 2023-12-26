@@ -39,7 +39,7 @@ export const authCheck = async () => {
     }
 
     const data = await serverSessionCheck();
-    //console.log(data);
+    console.log(data);
     if (!data) {
         deleteCookie('session');
        
@@ -53,7 +53,7 @@ export const authCheckReverse = async () => {
     if (session) {
         const data = await serverSessionCheck();
         if (data) {
-            //location.href = '/';
+            location.href = '/';
         }
     }
 };
@@ -91,3 +91,10 @@ export const getQueryString = (param) => {
     const params = new URLSearchParams(window.location.search);
     return params.get(param);
 };
+
+// export const checkPower =  async (id) => {
+//     const res = await fetch(ServerUrl() + '/checkPower' + `?id=${id}`, { noCORS: true });
+//     const data = await res.json();
+//     return data;
+// }
+    

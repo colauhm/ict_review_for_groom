@@ -47,7 +47,8 @@ const secretQnABoardSelector = document.querySelector('.secretQnABoardSelector')
 const secretTypeButton = document.getElementById('secretTypeButton');
 const secretCheckBox = document.getElementById('secretCheckBox');
 
-const data = await serverSessionCheck();
+const myInfo = requestBoardListType.category == 'notice'? await serverSessionCheck():await authCheck();
+console.log(myInfo);
 
 //--------------------버튼 선택시 다른 버튼은 선택버튼 활성화 나머지버튼 활성화 기능-----------//
 
@@ -71,7 +72,7 @@ async function typeChoice(clickedButton, allButtons) {
     Object.values(allButtons).forEach(button => {
         button.disabled = (button === clickedButton) ? true : false;
     });
-    console.log(clickedButton.name);
+    //console.log(clickedButton.name);
     return clickedButton.name;
 }
 
@@ -86,9 +87,13 @@ secretTypeButton.disabled = true;
 setupButtons(boardCategory.noticeSelector, boardCategory, requestBoardListType, 'category');
 
 selectBoardButtons.addEventListener('click', async () => {
-    QnAcheck(requestBoardListType.category);
+    const boardType = requestBoardListType.category
+    QnAcheck(boardType);
     typeChoice(sortTypebutton.recentSorter, sortTypebutton)
-    await authCheck();
+    if (boardType != 'notice'){
+        await authCheck();
+    }
+
 });
 QnAcheck(requestBoardListType.category);
 
@@ -101,17 +106,16 @@ function QnAcheck(boardType){
     } else {
         secretQnABoardSelector.style.display = 'none';
         sortTypebutton.recommendSorter.style.display = boardType == 'notice'? 'none':'block';
-        sortTypebutton.viewSorter.style.display = boardType == 'notice'? 'none':'block';
     }
     
 }
 
-function secretQnAcheck(){
+async function secretQnAcheck(){
     requestBoardListType.category = secretCheckBox.checked ? 'secretQnA':'QnA';
     //console.log( requestBoardListType.category);
-
     sortTypebutton.viewSorter.style.display = requestBoardListType.category == 'secretQnA'?'none':'block';
-
+    const newBoardList = await boardListLoad();
+    setBoardItem(newBoardList);
 }
 
 //---------------------------------------정렬 선택 부분----------------------------------------//
@@ -139,11 +143,11 @@ const setBoardItem = async (boardData) => {
     const boardList = document.querySelector('.boardList');
     if (boardList && boardData) {
         //
-        console.log(boardData);
+        //console.log(boardData);
         boardList.innerHTML = '';
         boardList.innerHTML = boardData
             .map((data) => {
-                return BoardItem(data.boardId, data.boardCreatedAt, data.boardTitle, data.boardViewCount, data.boardRecommendCount, data.userNickname);
+                return BoardItem(data.boardId, data.boardCreatedAt, data.boardTitle, data.boardViewCount, data.boardRecommendCount, data.userNickname, data.boardType, myInfo.power, myInfo.nickname);
             })
             .join('');
     }
@@ -167,6 +171,7 @@ function changeStatus(allButtons){
 
 
 function setStatusButton(data){
+    console.log(data);
     statusButton.login.style.display = data? 'none':'block';
     statusButton.signup.style.display = data? 'none':'block';
     statusButton.logout.style.display = data? 'block':'none';
@@ -175,9 +180,7 @@ function setStatusButton(data){
 
 
 changeStatus(statusButton);
-setStatusButton(data)
-
-
+setStatusButton(myInfo);
 const boardList = await boardListLoad();
 setBoardItem(boardList);
 
