@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from typing import Optional
 from ..database.query import execute_sql_query
 from ..controllers.session import getSessionData
-from datetime import datetime
+from datetime import datetime, timedelta
 
 class AddBoard(BaseModel):
     title : str
@@ -20,15 +20,58 @@ class modifyBoard(BaseModel):
     fileName : Optional[str]
     filePath : Optional[str]
 
+class RecordData(BaseModel):
+    recordType : str
+    boardId : int
+    recommend :Optional[bool]
 
 router = APIRouter(prefix="/api")
 
-@router.post("/postBoard")
+@router.post("/recordData")
+async def recordData(data:RecordData, session: Annotated[str, Header()] = None):
+    info = await getSessionData(session)    
+    print(data)
+    if data.recordType == 'time':
+        today = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        res = await execute_sql_query("""
+        SELECT viewStatus FROM status WHERE userId = %s AND boardId = %s;
+        """,(info.idx, data.boardId,))
+        print('분기 1')
+        if len(res) == 0:
+            await execute_sql_query("""
+                INSERT INTO status (userId, boardId, recommendStatus, viewStatus, viewCount) 
+                VALUES (%s, %s, %s, %s, %s)
+            """, (info.idx, data.boardId, False, today, 1,))
+            test = await execute_sql_query("SELECT * FROM status")
+            print(test[0])
+            print('분기 2   ')
+            return 200, "firstUpdate", "first"
+        if res[0]['viewStatus'] + timedelta(hours=1) < datetime.now():
+            await execute_sql_query("""
+                UPDATE status
+                SET viewStatus = %s
+                WHERE userId = %s AND boardId = %s;
+            """, (today, info.idx, data.boardId,))
+            await execute_sql_query("""
+                UPDATE status
+                SET viewCount = viewCount + 1
+                WHERE userId = %s AND boardId = %s;
+            """, (info.idx, data.boardId,))
+            return 200, "timeUpdate"
+        return 200, "viewed within 1 hour"
+    await execute_sql_query("""
+            UPDATE status
+            SET recommendStatus = %s
+            WHERE userId = %s AND boardId = %s;
+        """, (data.recommend, info.idx, data.boardId,))
+    
+    return 200
+
+
+@router.post("/board")
 async def addBoard(data: AddBoard, session: Annotated[str, Header()] = None):
     
-
     info = await getSessionData(session)
-    
     today = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     #print(data.title, data.content, today, 0, 0, 0, data.fileName, data.filePath, data.type)
     # 게시글 추가 로직 board 테이블에 게시글을 추가한다.
@@ -43,7 +86,31 @@ async def addBoard(data: AddBoard, session: Annotated[str, Header()] = None):
 
 @router.get("/boards")
 async def getBoards(category:str, sortType:str):
-    boards = await execute_sql_query("""
+    
+    boards = await execute_sql_query(f"""
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            {sortType} DESC;
+        """,(category,))
+    if boards:
+        print("""
         SELECT
             b.id AS boardId,
             b.title AS boardTitle,
@@ -68,9 +135,54 @@ async def getBoards(category:str, sortType:str):
     return boards
 
 @router.get("/board")
-async def getBoard(id:int):
-    board = await execute_sql_query("""
-       SELECT 
+async def getBoard(boardId: int, session: str = Header(default=None)):
+    info = await getSessionData(session)
+    if (info):
+        viewCount = await execute_sql_query("SELECT SUM(viewCount) FROM status WHERE boardId = %s;",(boardId,))
+        commentCount = await execute_sql_query("SELECT COUNT(*) FROM comment WHERE boardId = %s;",(boardId,))
+        recommendCount = await execute_sql_query("SELECT COUNT(*) FROM status WHERE boardId = %s AND recommendStatus = 1;",(boardId,))
+        await execute_sql_query("""
+                UPDATE board
+                SET commentCount = %s
+                WHERE id = %s;
+            """, (commentCount[0]['COUNT(*)'],boardId,))
+        await execute_sql_query("""
+                UPDATE board
+                SET recommendCount = %s
+                WHERE id = %s;
+            """, (recommendCount[0]['COUNT(*)'],boardId,))    
+        await execute_sql_query("""
+                UPDATE board
+                SET viewCount = %s
+                WHERE id = %s;
+            """, (viewCount[0]['SUM(viewCount)'],boardId,))
+        print(viewCount)   
+        board = await execute_sql_query("""
+        SELECT 
+                b.title,
+                b.content,
+                b.createdAt,
+                b.viewCount,
+                b.recommendCount,
+                b.commentCount,
+                b.fileName,
+                b.filePath,
+                u.nickname AS writerNickname,
+                b.type,
+                b.writerId,
+                s.recommendStatus
+            FROM 
+                board AS b
+            JOIN 
+                user AS u ON b.writerId = u.idx
+            LEFT JOIN
+                status AS s ON b.id = s.boardId
+            WHERE 
+                b.id = %s AND s.userId = %s;
+            """, (boardId, info.idx,))
+    else:
+        board = await execute_sql_query("""
+        SELECT 
             b.title,
             b.content,
             b.createdAt,
@@ -86,7 +198,23 @@ async def getBoard(id:int):
             board AS b
         JOIN 
             user AS u ON b.writerId = u.idx
+        LEFT JOIN
+            status AS s ON b.id = s.boardId
         WHERE 
             b.id = %s;
-        """, (id,))
+            """, (boardId,))
     return board
+
+
+@router.delete("/board/{id}")
+async def deleteBoard(id: str, session: Annotated[str, Header()] = None):
+
+    info = await getSessionData(session)
+    # 게시글 삭제 로직
+    res = await execute_sql_query("DELETE FROM board WHERE id = %s AND writerId = %s", (id, info.idx,))
+    res = await execute_sql_query("DELETE FROM status WHERE boardId = %s AND UserId = %s", (id, info.idx,))
+    # print(res)
+    if (res == 0):
+        return 401, {'message': '삭제 권한이 없습니다.'}
+    else:
+        return 200, {'message': '삭제되었습니다.'}

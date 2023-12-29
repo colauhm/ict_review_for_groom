@@ -2291,3 +2291,3229 @@ INFO:     Started server process [41311]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8088 (Press CTRL+C to quit)
+172.17.0.1 - - [26/Dec/2023 09:51:29] "GET /index.js HTTP/1.1" 304 -
+172.17.0.1 - - [26/Dec/2023 09:51:29] "GET /components/boardItem.js HTTP/1.1" 304 -
+172.17.0.1 - - [26/Dec/2023 09:51:29] code 404, message File not found
+172.17.0.1 - - [26/Dec/2023 09:51:29] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:     172.17.0.1:50398 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:50398 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:50398 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:51:32] "GET / HTTP/1.1" 304 -
+INFO:     172.17.0.1:50398 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:50398 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:51:32] "GET / HTTP/1.1" 304 -
+INFO:     172.17.0.1:50398 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:50398 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:51:33] "GET / HTTP/1.1" 304 -
+INFO:     172.17.0.1:50398 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:50398 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:51:33] "GET / HTTP/1.1" 304 -
+INFO:     172.17.0.1:50398 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:50398 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:51:33] "GET / HTTP/1.1" 304 -
+INFO:     172.17.0.1:50398 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:50398 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:51:34] "GET / HTTP/1.1" 304 -
+INFO:     172.17.0.1:50398 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:50398 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:50398 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "OPTIONS /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:51:49] "GET /index.html HTTP/1.1" 304 -
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:51:54] "GET /index.html HTTP/1.1" 304 -
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:51:55] "GET /index.html HTTP/1.1" 304 -
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:51:55] "GET /index.html HTTP/1.1" 304 -
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:51:55] "GET /index.html HTTP/1.1" 304 -
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58152 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58152 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56700 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58168 - "GET /api/boards?category=free&sortType=boardRecommendCount HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:52:58] "GET /board.html?id=2 HTTP/1.1" 304 -
+172.17.0.1 - - [26/Dec/2023 09:52:58] "GET /components/commentItem.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:55250 - "GET /api/board?id=2 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55250 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55250 - "GET /api/comment?id=2&&last=false HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:57:12] "GET / HTTP/1.1" 304 -
+172.17.0.1 - - [26/Dec/2023 09:57:12] "GET /index.css HTTP/1.1" 304 -
+172.17.0.1 - - [26/Dec/2023 09:57:12] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [26/Dec/2023 09:57:12] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [26/Dec/2023 09:57:12] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [26/Dec/2023 09:57:13] code 404, message File not found
+172.17.0.1 - - [26/Dec/2023 09:57:13] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:     172.17.0.1:43816 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:43816 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:43816 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:57:18] "GET /login.html HTTP/1.1" 304 -
+172.17.0.1 - - [26/Dec/2023 09:57:18] "GET /login.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:43816 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "OPTIONS /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "POST /api/login HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:57:32] "GET /index.html HTTP/1.1" 304 -
+INFO:     172.17.0.1:38610 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38610 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:47402 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:47402 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:47402 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:47402 - "GET /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 09:58:03] "GET /boardwrite.html HTTP/1.1" 304 -
+172.17.0.1 - - [26/Dec/2023 09:58:04] "GET /boardwrite.js HTTP/1.1" 200 -
+172.17.0.1 - - [26/Dec/2023 09:58:04] "GET /boardwrite.css HTTP/1.1" 304 -
+172.17.0.1 - - [26/Dec/2023 09:58:04] "GET /utils/function.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:53182 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53182 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57418 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57418 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58820 - "OPTIONS /api/postBoard HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58820 - "POST /api/postBoard HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58820 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58820 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58820 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58820 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58820 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58820 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58824 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58824 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58824 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58824 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58824 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52934 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52934 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52934 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52934 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52934 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52934 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52934 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:43344 - "GET /api/boards?category=QnA&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:43356 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:43356 - "GET /api/boards?category=QnA&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:43356 - "GET /api/boards?category=secretQnA&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:43356 - "GET /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [26/Dec/2023 10:02:25] "GET /board.html?id=16 HTTP/1.1" 200 -
+172.17.0.1 - - [26/Dec/2023 10:02:25] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [26/Dec/2023 10:02:25] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [26/Dec/2023 10:02:25] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [26/Dec/2023 10:02:25] "GET /utils/function.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:43356 - "GET /api/board?id=16 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:43356 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:43356 - "GET /api/comment?id=16&&last=false HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44578 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44578 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44578 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44578 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51732 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51732 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51732 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51732 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51732 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51728 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51732 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51540 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:41436 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:41436 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51554 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48402 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48402 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48402 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48402 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48402 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48402 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48402 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48412 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48412 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48412 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48412 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48412 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48412 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48412 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49476 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49476 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49476 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49476 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49476 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49476 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49476 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49476 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:50798 - "GET /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 04:51:39] "GET / HTTP/1.1" 304 -
+172.17.0.1 - - [27/Dec/2023 04:51:40] "GET /index.css HTTP/1.1" 304 -
+172.17.0.1 - - [27/Dec/2023 04:51:40] "GET /index.js HTTP/1.1" 304 -
+172.17.0.1 - - [27/Dec/2023 04:51:40] "GET /utils/function.js HTTP/1.1" 304 -
+172.17.0.1 - - [27/Dec/2023 04:51:40] "GET /components/boardItem.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:47880 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 04:51:40] code 404, message File not found
+172.17.0.1 - - [27/Dec/2023 04:51:40] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:     172.17.0.1:47880 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:47880 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49436 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49436 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49436 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49436 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49436 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49436 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49436 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49436 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49436 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49436 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49436 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49436 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 04:52:06] "GET /login.html HTTP/1.1" 304 -
+172.17.0.1 - - [27/Dec/2023 04:52:06] "GET /login.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:33934 - "OPTIONS /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:33934 - "POST /api/login HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 04:52:11] "GET /index.html HTTP/1.1" 304 -
+INFO:     172.17.0.1:33934 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:33934 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37974 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37974 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37974 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37974 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37974 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37974 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37974 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59978 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37974 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37974 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37970 - "GET /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 04:54:25] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:25] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:25] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:25] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:25] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:47] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:47] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:48] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:48] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:48] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:50] "GET /login.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:50] "GET /login.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:50] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:54] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:54] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:54] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:54] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 04:54:54] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 05:18:20] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 05:18:20] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 05:18:20] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 05:18:20] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 05:18:20] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 05:29:32] code 404, message File not found
+172.17.0.1 - - [27/Dec/2023 05:29:32] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [27/Dec/2023 05:29:32] "GET / HTTP/1.1" 304 -
+172.17.0.1 - - [27/Dec/2023 05:29:33] "GET /index.css HTTP/1.1" 304 -
+172.17.0.1 - - [27/Dec/2023 05:29:33] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 05:29:33] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 05:29:33] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 05:29:33] "GET /index.html HTTP/1.1" 304 -
+172.17.0.1 - - [27/Dec/2023 06:07:04] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:17] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:17] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:17] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:17] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:17] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:36] "GET /board.html?id=3 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:36] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:36] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:36] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:36] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:36] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:41] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:41] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:42] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:42] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:42] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:42] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:56] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:57] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:57] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:57] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:57] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 06:19:57] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:33] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:33] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:33] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:33] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:33] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:33] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:40] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:40] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:40] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:40] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:40] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:42] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:43] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:43] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:43] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:43] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:44] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:44] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:44] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:44] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:45:44] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:48] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:48] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:48] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:48] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:48] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:50] "GET /login.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:51] "GET /login.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:51] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:57] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:57] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:57] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:57] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:48:57] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:49:00] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:49:00] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:49:00] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:49:00] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:49:00] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:49:00] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:51:18] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:51:18] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:51:18] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:51:18] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:51:18] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:51:18] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:51:38] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:51:38] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:51:38] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:51:38] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:51:38] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:51:38] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:52:12] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:52:12] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:52:12] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:52:13] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:52:13] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:15] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:15] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:15] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:15] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:15] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:41] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:42] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:42] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:42] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:42] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:43] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:43] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:43] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:43] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:44] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:44] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:45] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:45] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:45] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:45] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:57] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:57] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:57] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:57] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:54:57] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:32] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:33] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:33] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:33] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:33] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:34] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:34] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:34] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:34] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:34] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:36] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:36] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:36] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:36] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:55:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:14] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:14] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:14] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:14] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:15] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:16] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:16] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:16] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:16] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:17] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:30] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:30] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:30] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:30] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:33] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:33] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:33] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:56:33] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:57:08] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:57:08] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:57:08] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:57:08] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:57:08] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:57:33] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:57:35] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:57:35] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:57:35] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 07:57:35] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:00:31] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:00:31] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:00:31] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:00:31] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:00:31] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:00:32] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:00:33] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:00:33] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:00:33] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:00:33] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:04:14] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:04:14] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:04:14] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:04:14] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:04:14] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:04:15] "GET /fetch.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 08:05:36] "GET /fetch.html HTTP/1.1" 200 -
+INFO:     Started server process [56458]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8088): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+172.17.0.1 - - [27/Dec/2023 13:04:05] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:04:06] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:04:06] "GET /index.css HTTP/1.1" 304 -
+172.17.0.1 - - [27/Dec/2023 13:04:06] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:04:06] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:04:07] code 404, message File not found
+172.17.0.1 - - [27/Dec/2023 13:04:07] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [27/Dec/2023 13:04:29] "GET / HTTP/1.1" 304 -
+172.17.0.1 - - [27/Dec/2023 13:04:29] "GET / HTTP/1.1" 304 -
+INFO:     Started server process [59875]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8088 (Press CTRL+C to quit)
+172.17.0.1 - - [27/Dec/2023 13:05:36] "GET / HTTP/1.1" 304 -
+INFO:     172.17.0.1:56530 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 13:05:39] "GET /login.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:05:40] "GET /login.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:56530 - "OPTIONS /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "POST /api/login HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 13:05:44] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:05:44] code 404, message File not found
+172.17.0.1 - - [27/Dec/2023 13:05:44] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:     172.17.0.1:56530 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 13:05:46] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:05:46] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:05:46] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:05:46] "GET /components/commentItem.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:56530 - "GET /api/board?id=1 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/comment?id=1&&last=false HTTP/1.1" 200 OK
+INFO:     172.17.0.1:56530 - "GET /api/boardCommentCount?id=1 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=free&sortType=boardRecommendCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=free&sortType=boardRecommendCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 13:06:05] "GET /board.html?id=3 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:06:06] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:06:06] "GET /index.css HTTP/1.1" 200 -
+INFO:     172.17.0.1:54620 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 13:06:07] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:06:07] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:06:07] "GET /components/commentItem.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:54620 - "GET /api/board?id=3 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54620 - "GET /api/comment?id=3&&last=false HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=free&sortType=boardRecommendCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46324 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39544 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39544 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39544 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39544 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39544 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39544 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39544 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=secretQnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=QnA&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 13:07:13] "GET /boardwrite.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:07:14] "GET /boardwrite.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:07:14] "GET /boardwrite.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:07:14] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:07:14] "GET /index.css HTTP/1.1" 200 -
+INFO:     172.17.0.1:36844 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36844 - "GET /api/checkSession HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 13:07:20] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:07:20] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:07:20] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:07:20] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:07:20] "GET /components/boardItem.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:40696 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40696 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40696 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40696 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40700 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40704 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40696 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [27/Dec/2023 13:08:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:55] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:55] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:55] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:55] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:56] "GET /login.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:56] "GET /login.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:56] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:57] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:57] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:57] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:57] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:57] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:08:59] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:09:00] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:09:00] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:09:00] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:09:00] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:09:00] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:42] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:42] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:42] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:42] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:42] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:42] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:46] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:46] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:46] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:46] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:46] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:50] "GET /board.html?id=15 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:50] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:50] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:50] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:50] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:50] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:55] "GET /board.html?id=15 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:55] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:55] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:56] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:56] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:30:56] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:06] "GET /login.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:06] "GET /login.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:17] "GET /board.html?id=2 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:17] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:17] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:17] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:17] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:17] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:46] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:47] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:47] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:47] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 13:31:47] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:27:52] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:27:52] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:27:52] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:27:52] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:27:53] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:27:54] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:27:55] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:27:55] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:27:55] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:27:55] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:27:55] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:35:22] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:35:22] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:35:22] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:35:22] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:35:22] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 14:35:22] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 16:56:25] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 16:56:25] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 16:56:25] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 16:56:25] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 16:56:25] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 16:56:25] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:47] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:47] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:47] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:47] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:47] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:47] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:50] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:50] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:50] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:50] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:50] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:52] "GET /board.html?id=7 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:52] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:52] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:52] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:52] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:10:52] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:46] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:46] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:46] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:46] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:46] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:47] "GET /login.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:47] "GET /login.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:47] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:49] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:49] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:49] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:49] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:49] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:50] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:51] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:51] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:51] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:51] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:51] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:59] "GET /board.html?id=2 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:59] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:59] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:59] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:59] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:11:59] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:05] "GET /board.html?id=5 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:05] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:05] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:05] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:05] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:05] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:07] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:07] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:07] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:08] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:08] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:08] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:10] "GET /board.html?id=2 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:10] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:10] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:10] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:10] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:10] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:12] "GET /board.html?id=4 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:12] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:12] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:12] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:12] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:12] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:15] "GET /board.html?id=4 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:15] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:15] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:15] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:15] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:15] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:17] "GET /board.html?id=6 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:17] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:17] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:17] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:17] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:17] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:20] "GET /board.html?id=6 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:20] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:20] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:20] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:20] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:20] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:24] "GET /board.html?id=4 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:25] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:25] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:25] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:25] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:25] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:25] "GET /board.html?id=4 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:25] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:25] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:25] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:25] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:25] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:27] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:27] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:27] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:27] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:27] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:31] "GET /board.html?id=6 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:31] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:31] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:31] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:31] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:31] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:37] "GET /board.html?id=6 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:37] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:37] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:37] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:37] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:37] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:42] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:42] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:42] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:42] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:42] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:48] "GET /board.html?id=6 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:48] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:48] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:48] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:48] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:48] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:53] "GET /board.html?id=6 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:53] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:53] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:53] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:53] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:12:53] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:13:59] "GET /board.html?id=1 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:13:59] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:13:59] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:13:59] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:13:59] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:13:59] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:03] "GET /board.html?id=6 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:03] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:03] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:03] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:03] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:04] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:11] "GET /board.html?id=6 HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:11] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:11] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:11] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:11] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:11] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:13] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:13] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:13] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:13] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:13] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [27/Dec/2023 17:14:18] "GET /fetch.html HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:05:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:05:24] "GET /index.css HTTP/1.1" 304 -
+172.17.0.1 - - [29/Dec/2023 13:05:24] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:05:24] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:05:24] "GET /utils/function.js HTTP/1.1" 200 -
+INFO:     Started server process [82838]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8088 (Press CTRL+C to quit)
+172.17.0.1 - - [29/Dec/2023 13:05:57] "GET /index.js HTTP/1.1" 304 -
+172.17.0.1 - - [29/Dec/2023 13:06:04] "GET / HTTP/1.1" 304 -
+172.17.0.1 - - [29/Dec/2023 13:06:04] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:05] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:06] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:06] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:07] code 404, message File not found
+172.17.0.1 - - [29/Dec/2023 13:06:07] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:     172.17.0.1:40584 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40584 - "GET /api/checkSession HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40584 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:06:07] "GET / HTTP/1.1" 304 -
+172.17.0.1 - - [29/Dec/2023 13:06:07] "GET /utils/function.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:40584 - "GET /api/checkSession HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40584 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40584 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40584 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40584 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40584 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:06:14] "GET /board.html?id=7 HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:14] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:14] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:14] "GET /utils/function.js HTTP/1.1" 304 -
+172.17.0.1 - - [29/Dec/2023 13:06:14] "GET /components/commentItem.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:34112 - "OPTIONS /api/board?boardId=7 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:34112 - "OPTIONS /api/recordData HTTP/1.1" 200 OK
+[{'SUM(viewCount)': None}]
+INFO:     172.17.0.1:34112 - "GET /api/board?boardId=7 HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/applications.py", line 292, in __call__
+    await super().__call__(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/routing.py", line 273, in app
+    raw_response = await run_endpoint_function(
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/routing.py", line 190, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/workspace/ict_review_for_groom/server/routers/board.py", line 181, in getBoard
+    """, (boardId, info.idx,))
+AttributeError: 'bool' object has no attribute 'idx'
+recordType='time' boardId=7 recommend=None
+INFO:     172.17.0.1:34118 - "POST /api/recordData HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/applications.py", line 292, in __call__
+    await super().__call__(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/routing.py", line 273, in app
+    raw_response = await run_endpoint_function(
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/routing.py", line 190, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/workspace/ict_review_for_groom/server/routers/board.py", line 38, in recordData
+    """,(info.idx, data.boardId,))
+AttributeError: 'bool' object has no attribute 'idx'
+172.17.0.1 - - [29/Dec/2023 13:06:28] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:28] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:29] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:29] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:29] "GET /utils/function.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:51268 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51268 - "GET /api/checkSession HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51268 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51268 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51268 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51274 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51274 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:06:32] "GET /login.html HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:32] "GET /login.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:32] "GET /utils/function.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:51274 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51274 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51274 - "OPTIONS /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51274 - "POST /api/login HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:06:34] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:34] code 404, message File not found
+172.17.0.1 - - [29/Dec/2023 13:06:34] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [29/Dec/2023 13:06:34] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:34] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:34] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:34] "GET /utils/function.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:51274 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51274 - "GET /api/checkSession HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51274 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51274 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51280 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51274 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51280 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:06:35] "GET /board.html?id=7 HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:35] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:35] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:35] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:35] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:06:35] "GET /utils/function.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:51280 - "OPTIONS /api/recordData HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51280 - "OPTIONS /api/board?boardId=7 HTTP/1.1" 200 OK
+recordType='time' boardId=7 recommend=None
+분기 1
+{'userId': 1, 'boardId': 1, 'recommendStatus': 0, 'viewStatus': datetime.datetime(2023, 12, 27, 17, 11, 51), 'viewCount': None}
+분기 2   
+INFO:     172.17.0.1:51280 - "POST /api/recordData HTTP/1.1" 200 OK
+[{'SUM(viewCount)': Decimal('1')}]
+INFO:     172.17.0.1:51280 - "GET /api/board?boardId=7 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51280 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51280 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51280 - "GET /api/comment?id=7&&last=false HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40302 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40302 - "GET /api/checkSession HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardCreatedAt')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardViewCount')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardRecommendCount')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardRecommendCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardViewCount')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardCreatedAt')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardViewCount')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardRecommendCount')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardRecommendCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardViewCount')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardRecommendCount')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardRecommendCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardViewCount')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardRecommendCount')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardRecommendCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardViewCount')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardRecommendCount')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardRecommendCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('free', 'boardViewCount')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=free&sortType=boardViewCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40302 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:08:25] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:08:25] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:08:25] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:08:25] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:08:25] "GET /components/boardItem.js HTTP/1.1" 200 -
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51970 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51970 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51970 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51974 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51974 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:08:27] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:08:27] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:08:27] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:08:27] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:08:27] "GET /components/boardItem.js HTTP/1.1" 200 -
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51974 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51974 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51970 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51974 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51976 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:09:29] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:29] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:29] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:29] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:29] "GET /utils/function.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:55132 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55132 - "GET /api/checkSession HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:55132 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:55132 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:55132 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:55132 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:55132 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:09:41] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:42] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:42] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:42] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:42] "GET /components/boardItem.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:51104 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51104 - "GET /api/checkSession HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51104 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51104 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51116 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51124 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:51104 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:09:49] "GET /board.html?id=7 HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:49] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:49] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:49] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:49] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:09:49] "GET /index.css HTTP/1.1" 200 -
+INFO:     172.17.0.1:57052 - "OPTIONS /api/board?boardId=7 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57052 - "OPTIONS /api/recordData HTTP/1.1" 200 OK
+[{'SUM(viewCount)': Decimal('1')}]
+INFO:     172.17.0.1:57052 - "GET /api/board?boardId=7 HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/applications.py", line 292, in __call__
+    await super().__call__(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/routing.py", line 273, in app
+    raw_response = await run_endpoint_function(
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/routing.py", line 190, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/workspace/ict_review_for_groom/server/routers/board.py", line 181, in getBoard
+    """, (boardId, info.idx,))
+AttributeError: 'bool' object has no attribute 'idx'
+recordType='time' boardId=7 recommend=None
+INFO:     172.17.0.1:57060 - "POST /api/recordData HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/applications.py", line 292, in __call__
+    await super().__call__(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/routing.py", line 273, in app
+    raw_response = await run_endpoint_function(
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/routing.py", line 190, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/workspace/ict_review_for_groom/server/routers/board.py", line 38, in recordData
+    """,(info.idx, data.boardId,))
+AttributeError: 'bool' object has no attribute 'idx'
+172.17.0.1 - - [29/Dec/2023 13:10:00] "GET /login.html HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:10:00] "GET /login.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:10:00] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:10:00] code 404, message File not found
+172.17.0.1 - - [29/Dec/2023 13:10:00] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [29/Dec/2023 13:10:00] code 404, message File not found
+172.17.0.1 - - [29/Dec/2023 13:10:00] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:     172.17.0.1:55988 - "OPTIONS /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55988 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55988 - "OPTIONS /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55988 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55988 - "OPTIONS /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55988 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55988 - "OPTIONS /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55988 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55988 - "OPTIONS /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55988 - "POST /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55988 - "OPTIONS /api/login HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55988 - "POST /api/login HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:10:12] "GET /index.html HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:10:12] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:10:12] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:10:12] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:10:12] "GET /components/boardItem.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:55988 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55988 - "GET /api/checkSession HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:55988 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:55988 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:55988 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:55988 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:55988 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:15:35] "GET /board.html?id=7 HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:35] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:35] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:35] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:35] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:35] "GET /components/commentItem.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:34522 - "OPTIONS /api/recordData HTTP/1.1" 200 OK
+INFO:     172.17.0.1:34522 - "OPTIONS /api/board?boardId=7 HTTP/1.1" 200 OK
+recordType='time' boardId=7 recommend=None
+분기 1
+{'userId': 1, 'boardId': 1, 'recommendStatus': 0, 'viewStatus': datetime.datetime(2023, 12, 27, 17, 11, 51), 'viewCount': None}
+분기 2   
+INFO:     172.17.0.1:34522 - "POST /api/recordData HTTP/1.1" 200 OK
+[{'SUM(viewCount)': Decimal('2')}]
+INFO:     172.17.0.1:34538 - "GET /api/board?boardId=7 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:34538 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:34538 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:34538 - "GET /api/comment?id=7&&last=false HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:15:39] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:39] "GET /index.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:39] "GET /index.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:39] "GET /components/boardItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:39] "GET /utils/function.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:34538 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:34538 - "GET /api/checkSession HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:34538 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:34538 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:34538 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:34522 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:34538 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 13:15:40] "GET /board.html?id=7 HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:40] "GET /board.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:40] "GET /board.css HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:40] "GET /utils/function.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:40] "GET /components/commentItem.js HTTP/1.1" 200 -
+172.17.0.1 - - [29/Dec/2023 13:15:40] "GET /index.css HTTP/1.1" 200 -
+INFO:     172.17.0.1:34538 - "OPTIONS /api/board?boardId=7 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:34538 - "OPTIONS /api/recordData HTTP/1.1" 200 OK
+[{'SUM(viewCount)': Decimal('2')}]
+INFO:     172.17.0.1:34538 - "GET /api/board?boardId=7 HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/applications.py", line 292, in __call__
+    await super().__call__(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/routing.py", line 273, in app
+    raw_response = await run_endpoint_function(
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/routing.py", line 190, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/workspace/ict_review_for_groom/server/routers/board.py", line 181, in getBoard
+    """, (boardId, info.idx,))
+AttributeError: 'bool' object has no attribute 'idx'
+recordType='time' boardId=7 recommend=None
+INFO:     172.17.0.1:34522 - "POST /api/recordData HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 408, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/applications.py", line 292, in __call__
+    await super().__call__(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/routing.py", line 273, in app
+    raw_response = await run_endpoint_function(
+  File "/root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/fastapi/routing.py", line 190, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/workspace/ict_review_for_groom/server/routers/board.py", line 38, in recordData
+    """,(info.idx, data.boardId,))
+AttributeError: 'bool' object has no attribute 'idx'
+INFO:     Started server process [87423]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8088 (Press CTRL+C to quit)
+172.17.0.1 - - [29/Dec/2023 14:00:08] "GET /index.js HTTP/1.1" 304 -
+172.17.0.1 - - [29/Dec/2023 14:00:08] "GET /utils/function.js HTTP/1.1" 304 -
+INFO:     172.17.0.1:40094 - "OPTIONS /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40094 - "GET /api/checkSession HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 14:00:10] "GET /board.html?id=7 HTTP/1.1" 304 -
+172.17.0.1 - - [29/Dec/2023 14:00:10] "GET /board.js HTTP/1.1" 200 -
+INFO:     172.17.0.1:40094 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40094 - "OPTIONS /api/board?boardId=7 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40094 - "GET /api/board?boardId=7 HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40094 - "GET /api/checkSession HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40094 - "GET /api/comment?id=7&&last=false HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40094 - "GET /api/checkSession HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardViewCount')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardViewCount')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardViewCount')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardViewCount')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardCreatedAt')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardCreatedAt HTTP/1.1" 200 OK
+
+        SELECT
+            b.id AS boardId,
+            b.title AS boardTitle,
+            b.createdAt AS boardCreatedAt,
+            b.writerId AS boardWriterId,
+            b.viewCount AS boardViewCount,
+            b.recommendCount AS boardRecommendCount,
+            b.commentCount AS boardcommentCount,   
+            b.type AS boardType,                      
+            u.nickname AS userNickname
+        FROM
+            board AS b
+        LEFT JOIN
+            user AS u
+        ON
+            b.writerId = u.idx
+        WHERE
+            b.type = %s
+        ORDER BY
+            %s DESC;
+         ('notice', 'boardViewCount')
+INFO:     172.17.0.1:40094 - "GET /api/boards?category=notice&sortType=boardViewCount HTTP/1.1" 200 OK
+172.17.0.1 - - [29/Dec/2023 14:05:10] "GET /index.js HTTP/1.1" 304 -
+172.17.0.1 - - [29/Dec/2023 14:05:11] "GET /fetch.html HTTP/1.1" 200 -
