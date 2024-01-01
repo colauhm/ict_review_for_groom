@@ -1,13 +1,18 @@
-import { checkInfo, authCheck, ServerUrl, serverSessionCheck, deleteCookie } from './utils/function.js';
-import { BoardItem } from './components/boardItem.js';
+import { checkInfo, authCheck, ServerUrl, deleteCookie } from './utils/function.js';
+import { BoardItem, AnswerItem } from './components/boardItem.js';
+
+const searchButtons = document.querySelector('.searchButtons');
+const searchCheck = document.getElementById('searchCheck');
+const selectButtons = document.querySelector('.seclectButtons');
 const requestBoardListType = {
     category : 'notice',
     sortMethod : 'boardCreatedAt'
 }
 
+
 const searchBoardListType = {
     category : 'all',
-    datailCategory : 'title',
+    datailCategory : 'b.title',
     searchContent : ''
 }
 
@@ -33,7 +38,7 @@ const searchTypeButton = {
 const searchDetailTypebutton = {
     title : document.getElementById('titleSearchButton'),
     content : document.getElementById('contentSearchButton'),
-    writer : document.getElementById('writerSearchButton')
+    nickname : document.getElementById('writerSearchButton')
 }
 
 const statusButton = {
@@ -53,8 +58,9 @@ console.log(boardList);
 
 async function newSetboards(){
     const newBoardList = await boardListLoad();
-    console.log(newBoardList);
     await setBoardItem(newBoardList);
+    answerCheck(newBoardList);
+    //console.log(newBoardList);
 }
 
 async function setDisabledButton(){
@@ -69,12 +75,23 @@ function setupButtons(typeButton, listType, methodKey) {
     Object.values(typeButton).forEach(button => {
         button.addEventListener('click', async () => {
             const selectedButtonName = await typeChoice(button, typeButton);
-
-            listType[methodKey] = secretCheckBox.checked && selectedButtonName =='QnA' ? 'secretQnA':selectedButtonName;
-            secretCheckBox.checked = listType[methodKey] == 'secretQnA' ?  secretCheckBox.checked:false;
             
-            await setSortButton();
-            await newSetboards();
+            console.log(selectedButtonName, searchCheck.checked);
+            if(searchCheck.checked){
+                if (typeButton == searchDetailTypebutton){
+                    const detail = selectedButtonName == 'nickname' ? 'u.':'b.';
+                    listType[methodKey] = detail + selectedButtonName;
+                } else {
+                    listType[methodKey] = selectedButtonName;
+                }
+                await setSearchboard();
+            }else {
+                listType[methodKey] = secretCheckBox.checked && selectedButtonName =='QnA' ? 'secretQnA':selectedButtonName;
+                secretCheckBox.checked = listType[methodKey] == 'secretQnA' ?  secretCheckBox.checked:false;
+                console.log(listType);
+                await setSortButton();
+                await newSetboards();
+            }
         });
     });
 }
@@ -123,21 +140,77 @@ setupButtons(searchDetailTypebutton, searchBoardListType, 'datailCategory');
 async function boardListLoad(){
     const {category, sortMethod} = requestBoardListType;
     //console.log(requestBoardListType, searchBoardListType);
-    const boardList = await fetch(ServerUrl() + '/boards' + `?category=${category}` + `&sortType=${sortMethod}`, {noCORS: true });
+    const boardList = await fetch(ServerUrl() + '/boards' + `?category=${category}` + `&detail=${sortMethod}` + '&type=sort' + '&searchContent=', {noCORS: true });
     const data = await boardList.json();
-    console.log(data);
+    //console.log(data);
     return data;
 }
+
+async function searchListLoad(){
+    const boardList = await fetch(ServerUrl() + '/boards' + `?category=${searchBoardListType.category}` + `&detail=${searchBoardListType.datailCategory}` + '&type=search' + `&searchContent=${searchBoardListType.searchContent}`, {noCORS: true });
+    const data = await boardList.json();
+   
+    return data;
+}
+
 const setBoardItem = async (boardData) => {
     const boardList = document.querySelector('.boardList');
     if (boardList && boardData) {
         boardList.innerHTML = boardData
             .map((data) => {
-                return BoardItem(data.boardId, data.boardCreatedAt, data.boardTitle, data.boardViewCount, data.boardRecommendCount, data.userNickname, data.boardType, myInfo.power, myInfo.nickname);
+                if(!data.answer){
+                    return BoardItem(data.boardId, data.boardCreatedAt, data.boardTitle, data.boardViewCount, data.boardRecommendCount, data.userNickname, data.boardType, myInfo.power, myInfo.nickname);
+                }
             })
             .join('');
     }
 };
+
+function setAnswerItem(boardData, id) {
+    console.log(boardData);
+    const answerList = document.getElementById(`answer${id}`);
+    console.log(answerList);
+    if (answerList && boardData) {
+        console.log(boardData);
+        answerList.innerHTML += AnswerItem(boardData.boardId, boardData.boardCreatedAt, boardData.boardTitle, boardData.boardViewCount, boardData.userNickname, boardData.boardType, myInfo.power, myInfo.nickname);
+    }
+}
+function answerCheck(boardData){
+    //console.log(boardData);
+    boardData.forEach(function(data) {
+        if (data.answer) {
+            console.log(data.answer)
+            setAnswerItem(data, data.answer);
+        }
+    });
+}
+
+//----------------------------------검색기능 구현--------------------------------------------------//
+
+async function setSearchboard(){
+    searchBoardListType.searchContent = searchContent.value;
+    const searchList = await searchListLoad();
+    console.log(searchList);
+    await setBoardItem(searchList);
+    answerCheck(searchList);
+}
+
+const searchContent = document.querySelector('.searchInput');
+searchCheck.addEventListener("change", async() => {
+    selectButtons.disabled = searchCheck.checked ? true:false;
+    selectButtons.style.display = searchCheck.checked ? "none":"block";
+    if (searchCheck.checked){
+        await setSearchboard();
+    } else{
+        await newSetboards();
+    }
+});
+
+searchContent.addEventListener("input", async() => {
+    if (searchCheck.checked){
+        await setSearchboard();
+    }
+});
 
 //--------------------------------세션 유무에 따라 보이는 버튼 다르게-----------------------------//
 
@@ -155,15 +228,19 @@ function changeStatus(allButtons){
     });
 }
 
-function setStatusButton(data){
-    console.log(data);
+function setShowButton(data){
+    //console.log(data);
     statusButton.login.style.display = data? 'none':'block';
     statusButton.signup.style.display = data? 'none':'block';
     statusButton.logout.style.display = data? 'block':'none';
+    if (!data){
+        searchButtons.innerHTML = "";
+    }
     document.querySelector('.changeStatus').style.display = 'flex';
 }
 
+
 setBoardItem(boardList);
 changeStatus(statusButton);
-setStatusButton(myInfo);
+setShowButton(myInfo);
 await setDisabledButton();

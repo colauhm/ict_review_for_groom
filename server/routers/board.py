@@ -9,16 +9,12 @@ from datetime import datetime, timedelta
 class AddBoard(BaseModel):
     title : str
     content : str
-    type : str
+    type : Optional[str]
     fileName : Optional[str]
     filePath : Optional[str]
+    updateType : Optional[str]
+    boardId : Optional[int]
 
-class modifyBoard(BaseModel):
-    id: int
-    title: str
-    content: str
-    fileName : Optional[str]
-    filePath : Optional[str]
 
 class RecordData(BaseModel):
     recordType : str
@@ -70,74 +66,128 @@ async def recordData(data:RecordData, session: Annotated[str, Header()] = None):
 
 @router.post("/board")
 async def addBoard(data: AddBoard, session: Annotated[str, Header()] = None):
-    
     info = await getSessionData(session)
     today = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    #print(data.title, data.content, today, 0, 0, 0, data.fileName, data.filePath, data.type)
-    # 게시글 추가 로직 board 테이블에 게시글을 추가한다.
+    print(data)
+    if data.updateType == 'modify':
+        await execute_sql_query("""
+                UPDATE board
+                SET title = %s, content = %s, updatedAt = %s, fileName = %s, filePath = %s
+                WHERE id = %s;
+            """, (data.title, data.content, today, data.fileName, data.filePath, data.boardId,))
+        return
+    elif data.updateType == 'answer':
+        await execute_sql_query("""INSERT INTO board (title, content, createdAt, viewCount, fileName, filePath, type, writerId, answer) 
+                                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)""", 
+                                    (data.title, data.content, today, 0, data.fileName, data.filePath, data.type, info.idx, data.boardId,))
+        answerCount =  await execute_sql_query("""
+                            SELECT COUNT(*) AS answerCount
+                            FROM board
+                            WHERE answer IS NOT NULL AND answer <> '';
+                            """)
+        print(answerCount)
+        await execute_sql_query("""
+                UPDATE board
+                SET answerCount = %s
+                WHERE id = %s;""", (answerCount[0]['answerCount'],data.boardId,))
+       
+        return
     res = await execute_sql_query("""INSERT INTO board (title, content, createdAt, viewCount, recommendCount, commentCount, fileName, filePath, type, writerId) 
-                                                                                                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""", 
-                                                                            (data.title, data.content, today, 0, 0, 0, data.fileName, data.filePath, data.type, info.idx,))
-    # 게시글 마지막 idx 조회
+                                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""", 
+                                    (data.title, data.content, today, 0, 0, 0, data.fileName, data.filePath, data.type, info.idx,))
     res = await execute_sql_query("SELECT MAX(id) AS id FROM board")
-
     # print(res)
     return 200, {'message': res[0]['id']}
 
 @router.get("/boards")
-async def getBoards(category:str, sortType:str):
-    
-    boards = await execute_sql_query(f"""
-        SELECT
-            b.id AS boardId,
-            b.title AS boardTitle,
-            b.createdAt AS boardCreatedAt,
-            b.writerId AS boardWriterId,
-            b.viewCount AS boardViewCount,
-            b.recommendCount AS boardRecommendCount,
-            b.commentCount AS boardcommentCount,   
-            b.type AS boardType,                      
-            u.nickname AS userNickname
-        FROM
-            board AS b
-        LEFT JOIN
-            user AS u
-        ON
-            b.writerId = u.idx
-        WHERE
-            b.type = %s
-        ORDER BY
-            {sortType} DESC;
-        """,(category,))
-    if boards:
-        print("""
-        SELECT
-            b.id AS boardId,
-            b.title AS boardTitle,
-            b.createdAt AS boardCreatedAt,
-            b.writerId AS boardWriterId,
-            b.viewCount AS boardViewCount,
-            b.recommendCount AS boardRecommendCount,
-            b.commentCount AS boardcommentCount,   
-            b.type AS boardType,                      
-            u.nickname AS userNickname
-        FROM
-            board AS b
-        LEFT JOIN
-            user AS u
-        ON
-            b.writerId = u.idx
-        WHERE
-            b.type = %s
-        ORDER BY
-            %s DESC;
-        """,(category,sortType,))
+async def getBoards(category:str, detail:str, type:str, searchContent:Optional[str]):
+    if type == 'sort':
+        boards = await execute_sql_query(f"""
+            SELECT
+                b.id AS boardId,
+                b.title AS boardTitle,
+                b.createdAt AS boardCreatedAt,
+                b.writerId AS boardWriterId,
+                b.viewCount AS boardViewCount,
+                b.recommendCount AS boardRecommendCount,
+                b.commentCount AS boardcommentCount,   
+                b.type AS boardType,                      
+                u.nickname AS userNickname,
+                b.answer
+            FROM
+                board AS b
+            LEFT JOIN
+                user AS u
+            ON
+                b.writerId = u.idx
+            WHERE
+                b.type = %s
+            ORDER BY
+                {detail} DESC;
+            """,(category,))
+    else:
+        if len(searchContent) == 0:
+            return []
+        if category == 'all':
+            boards = await execute_sql_query(f"""
+                SELECT
+                    b.id AS boardId,
+                    b.title AS boardTitle,
+                    b.content AS boardContent,
+                    b.createdAt AS boardCreatedAt,
+                    b.writerId AS boardWriterId,
+                    b.viewCount AS boardViewCount,
+                    b.recommendCount AS boardRecommendCount,
+                    b.commentCount AS boardcommentCount,   
+                    b.type AS boardType,                      
+                    u.nickname AS userNickname,
+                    b.answer
+                FROM
+                    board AS b
+                LEFT JOIN
+                    user AS u 
+                ON
+                    b.writerId = u.idx
+                WHERE
+                    {detail} LIKE CONCAT('%%', %s ,'%%')
+                    AND b.type <> 'secretQnA'
+                ORDER BY
+                    boardCreatedAt DESC;
+                """,(searchContent,))
+        else:
+            boards = await execute_sql_query(f"""
+                SELECT
+                    b.id AS boardId,
+                    b.title AS boardTitle,
+                    b.content AS boardContent,
+                    b.createdAt AS boardCreatedAt,
+                    b.writerId AS boardWriterId,
+                    b.viewCount AS boardViewCount,
+                    b.recommendCount AS boardRecommendCount,
+                    b.commentCount AS boardcommentCount,   
+                    b.type AS boardType,                      
+                    u.nickname AS userNickname,
+                    b.answer
+                FROM
+                    board AS b
+                LEFT JOIN
+                    user AS u 
+                ON
+                    b.writerId = u.idx
+                WHERE
+                    b.type = %s AND {detail} LIKE CONCAT('%%', %s ,'%%') 
+                    AND b.type <> 'secretQnA'
+                ORDER BY
+                    boardCreatedAt DESC;
+                """, (category, searchContent,))
+
     return boards
 
 @router.get("/board")
-async def getBoard(boardId: int, session: str = Header(default=None)):
+async def getBoard(boardId: int,answer:bool, session: str = Header(default=None)):
     info = await getSessionData(session)
     if (info):
+        
         viewCount = await execute_sql_query("SELECT SUM(viewCount) FROM status WHERE boardId = %s;",(boardId,))
         commentCount = await execute_sql_query("SELECT COUNT(*) FROM comment WHERE boardId = %s;",(boardId,))
         recommendCount = await execute_sql_query("SELECT COUNT(*) FROM status WHERE boardId = %s AND recommendStatus = 1;",(boardId,))
@@ -156,30 +206,57 @@ async def getBoard(boardId: int, session: str = Header(default=None)):
                 SET viewCount = %s
                 WHERE id = %s;
             """, (viewCount[0]['SUM(viewCount)'],boardId,))
-        print(viewCount)   
-        board = await execute_sql_query("""
-        SELECT 
-                b.title,
-                b.content,
-                b.createdAt,
-                b.viewCount,
-                b.recommendCount,
-                b.commentCount,
-                b.fileName,
-                b.filePath,
-                u.nickname AS writerNickname,
-                b.type,
-                b.writerId,
-                s.recommendStatus
-            FROM 
-                board AS b
-            JOIN 
-                user AS u ON b.writerId = u.idx
-            LEFT JOIN
-                status AS s ON b.id = s.boardId
-            WHERE 
-                b.id = %s AND s.userId = %s;
-            """, (boardId, info.idx,))
+        if(answer):
+            board = await execute_sql_query("""
+            SELECT 
+                    b.title,
+                    b.id AS boardId,
+                    b.content,
+                    b.createdAt,
+                    b.viewCount,
+                    b.recommendCount,
+                    b.commentCount,
+                    b.fileName,
+                    b.filePath,
+                    u.nickname AS writerNickname,
+                    b.type,
+                    b.writerId,
+                    s.recommendStatus,
+                    b.answer
+                FROM 
+                    board AS b
+                JOIN 
+                    user AS u ON b.writerId = u.idx
+                LEFT JOIN
+                    status AS s ON b.id = s.boardId
+                WHERE 
+                    b.answer = %s AND s.userId = %s;
+                """, (boardId, info.idx,))
+        else:
+            board = await execute_sql_query("""
+            SELECT 
+                    b.title,
+                    b.content,
+                    b.createdAt,
+                    b.viewCount,
+                    b.recommendCount,
+                    b.commentCount,
+                    b.fileName,
+                    b.filePath,
+                    u.nickname AS writerNickname,
+                    b.type,
+                    b.writerId,
+                    s.recommendStatus,
+                    b.answer
+                FROM 
+                    board AS b
+                JOIN 
+                    user AS u ON b.writerId = u.idx
+                LEFT JOIN
+                    status AS s ON b.id = s.boardId
+                WHERE 
+                    b.id = %s AND s.userId = %s;
+                """, (boardId, info.idx,))
     else:
         board = await execute_sql_query("""
         SELECT 
@@ -193,7 +270,8 @@ async def getBoard(boardId: int, session: str = Header(default=None)):
             b.filePath,
             u.nickname AS writerNickname,
             b.type,
-            b.writerId
+            b.writerId,
+            b.answer
         FROM 
             board AS b
         JOIN 
@@ -218,3 +296,9 @@ async def deleteBoard(id: str, session: Annotated[str, Header()] = None):
         return 401, {'message': '삭제 권한이 없습니다.'}
     else:
         return 200, {'message': '삭제되었습니다.'}
+    
+@router.get("/boardNum")
+async def getBoardNum():
+    res = await execute_sql_query("SELECT MAX(id) FROM board;")
+    print(res)
+    return res[0]["MAX(id)"] 

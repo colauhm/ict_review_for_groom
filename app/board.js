@@ -1,6 +1,6 @@
-import { checkInfo, ServerUrl, getCookie, getUrlId, serverSessionCheck} from './utils/function.js';
+import { checkInfo, ServerUrl, getCookie, getUrlId, serverSessionCheck, getBoard} from './utils/function.js';
 import { commentItem } from './components/commentItem.js';
-
+import {AnswerItem} from './components/boardItem.js';
 
 const boardId = getUrlId();
 
@@ -29,20 +29,24 @@ const boardCommponent = {
 const boardEdit = {
     boardChangeButtons : document.querySelector('.boardChangeButtons'),
     boardEditButton :document.getElementById('editButton'),
-    boardDeleteButton :document.getElementById('deleteButton')
+    boardDeleteButton :document.getElementById('deleteButton'),
+    boardAnswerButton : document.getElementById('QnAAnswer')
 }
+
 
 if (await serverSessionCheck()){recordStatus(boardId, 'time', null);}
 
-const boardData = await getBoard(boardId);
+const answerData = await getBoard(boardId, true);
+console.log(answerData);
+const boardData = await getBoard(boardId, false);
 const boardType = boardData[0]['type'];
 const myInfo = await checkInfo(boardType)
-const checkBoardWriter = myInfo.idx == boardData[0]['writerId'];
+const checkBoardWriter = (myInfo.idx == boardData[0]['writerId']);
 const commentList = await getComment(false);
 
-
+console.log(checkBoardWriter);
 async function setNewRecommendCountData(){
-    const newBoardData =  await getBoard(boardId);
+    const newBoardData =  await getBoard(boardId, false);
     showElement.recommendCountData.innerHTML = newBoardData[0]['recommendCount']; 
 } 
 
@@ -67,13 +71,6 @@ async function recordStatus(boardId, recordType, recommend){
     });
 }
 
-async function getBoard(boardId) {
-    //console.log(boardId);
-    const components = await fetch(ServerUrl() + '/board' + `?boardId=${boardId}`, { headers: {session: getCookie('session')}});
-    const data = await components.json();
-    //console.log(data);
-    return data;
-}
 
 
 async function addComment(){
@@ -115,9 +112,8 @@ const setComment = async (commentData) => {
 };
 
 const delectComment = async (commentId) => {
-    const response = await fetch(ServerUrl() + `/comment/${commentId}`, {
-        method: 'DELETE',
-        headers: { session: getCookie('session') }
+    const response = await fetch(ServerUrl() + `/comment?commentId=${commentId}&boardId=${boardId}`, {
+        method: 'DELETE'
     });
     console.log(await response.json());
 };
@@ -134,6 +130,18 @@ async function getSelectButton(){
     return document.querySelectorAll('.edit');
 }
 
+const setAnswer = async (answerData) => {
+    const answerList = document.querySelector('.answerList');
+    boardId
+    if (answerList && answerData) {
+        console.log(answerData);
+        answerList.innerHTML = answerData
+            .map((data) => {
+                return AnswerItem(data.boardId, data.createdAt, data.title, data.viewCount, data.writerNickname, data.type, myInfo.power, myInfo.nickname);
+            })
+            .join('');
+    }
+};
 showElement.addCommentButton.addEventListener('click', async () => {
     await addComment();
     alert('댓글이 작성되었습니다.');
@@ -169,6 +177,9 @@ async function displayElement(boardType){
             element.innerHTML = "";
         }
     });
+    if (boardType == 'QnA' || boardType == 'secretQnA'){
+        await setAnswer(answerData);
+    }
     if (checkBoardWriter){
         showElement.recommend.innerHTML = "";
 
@@ -179,9 +190,20 @@ async function displayElement(boardType){
 
 async function showElementCheck(boardType){ 
     displayElement(boardType);
+    
     showElement.viewCountData.innerHTML = boardData[0]['viewCount']; 
     showElement.commentCountData.innerHTML = boardData[0]['commentCount'];
-    showElement.recommendCountData.innerHTML = boardData[0]['recommendCount']; 
+    showElement.recommendCountData.innerHTML = boardData[0]['recommendCount'];
+}
+
+async function getFile(){
+    if (boardData[0]['fileName'] && boardData[0]['filePath']){
+        const fileDownloadLink = document.querySelector('.fileDownloadLink');
+        fileDownloadLink.innerHTML = `<a href="${ServerUrl()}/download/${boardId}" download>${boardData[0]['fileName']}</a>`
+    }
+
+    
+    
 }
 
 showElement.recommendCheckBox.addEventListener('change', async () => {
@@ -192,25 +214,70 @@ showElement.recommendCheckBox.addEventListener('change', async () => {
     await setNewRecommendCountData();
 });
 
-boardEdit.boardDeleteButton.addEventListener('click', () => {
-    const result = window.confirm('게시글을 삭제하시겟습니까?');
-    if (result){
-        delectBoard(boardId);
-        alert('게시글이 삭제되었습니다.');
-        window.location.href = '/';
-    } else {
-        alert('게시글 삭제가 취소되었습니다.');
-    }
-});
+async function clickDelectBoardButton(){
+    boardEdit.boardDeleteButton.addEventListener('click', async () => {
+        const result = window.confirm('게시글을 삭제하시겟습니까?');
+        if (result){
+            await delectBoard(boardId);
+            alert('게시글이 삭제되었습니다.');
+            window.location.href = '/';
+        } else {
+            alert('게시글 삭제가 취소되었습니다.');
+        }
+    });
+    
+}
 
 async function boardEditButtonSet(){
-    if (!(checkBoardWriter /*&&답글이 안달렸다면*/)){
-        boardEdit.boardChangeButtons.innerHTML = ""
+    console.log(checkBoardWriter, boardData[0])
+    if (!myInfo.power && !checkBoardWriter || boardData[0]['answer']){
+       boardEdit.boardChangeButtons.innerHTML = "";
     }
+    if ((boardType === 'QnA' || boardType === 'secretQnA') && !boardData[0]['answer']) {
+        if (myInfo.power) {
+            boardEdit.boardEditButton.style.display = "none";
+            await writeQnAAnswer();
+        } else if (answerData) {
+            boardEdit.boardEditButton.style.display = "none";
+        }
+    }    
+    else if (boardType == 'free'){
+        if (myInfo.power){
+            boardEdit.boardEditButton.style.display = "none";
+        }
+        else {
+            boardEdit.boardAnswerButton.style.display = "none";
+        }
+    } 
 }
+
+async function writeQnAAnswer(){
+    const QnAAnswer = document.getElementById('QnAAnswer');
+    QnAAnswer.addEventListener("click", async () => {
+        const result = window.confirm('답변을 작성하시겠습니까?');
+        if (result){
+            alert('답변 작성 사이트로 이동합니다.')
+            window.location.href = `/answerboard.html?id=${boardId}`
+        }
+    });
+}
+
+async function clickEditBoardButton(){
+    boardEdit.boardEditButton.addEventListener("click", async () => {
+        const result = window.confirm('게시글을 수정하시겠습니까?');
+        if (result){
+            alert('게시글 수정페이지로 이동합니다.');
+            window.location.href = `/modifyboard.html?id=${boardId}`
+        } 
+    });
+}
+
 
 
 await showElementCheck(boardType);
 await setComment(commentList);
 await commentEditButton();
 await boardEditButtonSet();
+await clickDelectBoardButton();
+await clickEditBoardButton();
+await getFile();
